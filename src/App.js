@@ -1,13 +1,19 @@
-import { BrowserRouter as Router, Routes } from 'react-router-dom';
+import {
+  BrowserRouter, Routes, Route, NavLink,
+} from 'react-router-dom';
 import Header from './components/Header';
+import Myprofile from './components/Myprofile';
 
 function App() {
   return (
-    <Router>
-      <h1> Hello team, we are almost done...</h1>
-      <Header />
-      <Routes />
-    </Router>
+    <BrowserRouter>
+      <NavLink to="/">Header</NavLink>
+      <NavLink to="/myprofile">My Profile</NavLink>
+      <Routes>
+        <Route exact path="/" element={<Header />} />
+        <Route exact path="/myprofile" element={<Myprofile />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

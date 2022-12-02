@@ -5,7 +5,7 @@ const Header = () => {
     {
       id: 1,
       path: '/my-profile',
-      text: 'Home',
+      text: 'My Profile',
     },
     {
       id: 1,
