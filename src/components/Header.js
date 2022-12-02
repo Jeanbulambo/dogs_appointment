@@ -5,12 +5,22 @@ const Header = () => {
     {
       id: 1,
       path: '/my-profile',
-      text: 'My Profile',
+      text: 'Home',
+    },
+    {
+      id: 1,
+      path: '/my-profile',
+      text: 'Appointment',
+    },
+    {
+      id: 1,
+      path: '/my-profile',
+      text: 'About us',
     },
   ];
   return (
     <nav className="navbar">
-      <img src="" alt="logo" />
+      <img src="./logo.png" alt="logo" />
       <ul className="nav-links">
         {Links.map((link) => (
           <li className="nav-link" key={Links.id}>
