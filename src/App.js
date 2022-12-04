@@ -1,19 +1,20 @@
-import {
-  BrowserRouter, Routes, Route, NavLink,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Myprofile from './components/Myprofile';
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import './components/app.css';
 
 function App() {
   return (
-    <BrowserRouter>
-      <NavLink to="/">Header</NavLink>
-      <NavLink to="/myprofile">My Profile</NavLink>
-      <Routes>
-        <Route exact path="/" element={<Header />} />
-        <Route exact path="/myprofile" element={<Myprofile />} />
-      </Routes>
-    </BrowserRouter>
+    <Router>
+      <Header />
+      <div className="container">
+        <Routes>
+          <Route path="/my-profile" element={<Myprofile />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

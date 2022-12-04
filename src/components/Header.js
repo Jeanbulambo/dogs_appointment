@@ -1,29 +1,30 @@
 import { NavLink } from 'react-router-dom';
+import { v4 as uuidv4 } from 'uuid';
+import './header.css';
 
 const Header = () => {
   const Links = [
     {
-      id: 1,
       path: '/my-profile',
       text: 'My Profile',
     },
     {
-      id: 1,
       path: '/my-profile',
       text: 'Appointment',
     },
     {
-      id: 1,
       path: '/my-profile',
       text: 'About us',
     },
   ];
   return (
     <nav className="navbar">
-      <img src="./logo.png" alt="logo" />
+      <NavLink className={(navData) => (navData.isActive ? 'actvie' : 'none')} to="/">
+        <img src="./logo.png" alt="logo" />
+      </NavLink>
       <ul className="nav-links">
         {Links.map((link) => (
-          <li className="nav-link" key={Links.id}>
+          <li className="nav-link" key={uuidv4()}>
             <NavLink className={(navData) => (navData.isActive ? 'actvie' : 'none')} to={link.path}>
               {link.text}
             </NavLink>
