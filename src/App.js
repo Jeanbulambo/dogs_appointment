@@ -4,6 +4,7 @@ import Myprofile from './components/Myprofile';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './components/app.css';
+import Home from './components/Home';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <div className="container">
         <Routes>
           <Route path="/my-profile" element={<Myprofile />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
         </Routes>
       </div>
     </Router>

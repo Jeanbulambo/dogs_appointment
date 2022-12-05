@@ -2,6 +2,7 @@ import React from 'react';
 
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import './hotelcard.css';
 
 function HotelCard() {
   return (
@@ -10,16 +11,17 @@ function HotelCard() {
       <Card.Body>
         <Card.Title>Home Hotel</Card.Title>
         <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+          molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+          numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
         </Card.Text>
-          <ul>
-            <li><img src="" alt="twitter"></img></li>
-            <li><img src="" alt="facebook"></img></li>
-            <li><img src="" alt="google+"></img></li>
-            <li><img src="" alt="v"></img></li>
-            <li><img src="" alt="p"></img></li> 
-          </ul>
+        <ul className="hotel-socials">
+          <li><img src="" alt="twitter" /></li>
+          <li><img src="" alt="facebook" /></li>
+          <li><img src="" alt="google+" /></li>
+          <li><img src="" alt="v" /></li>
+          <li><img src="" alt="p" /></li>
+        </ul>
         <Button variant="primary">My profile</Button>
       </Card.Body>
     </Card>
