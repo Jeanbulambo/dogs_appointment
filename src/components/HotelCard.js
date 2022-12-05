@@ -1,8 +1,7 @@
-import React from "react";
+import React from 'react';
 
 const HotelCard = () => (
-  <div className="hotel-card">
-    
-  </div>
-)
-  
+  <div className="hotel-card" />
+);
+
+export default HotelCard;
