@@ -12,6 +12,7 @@ function App() {
       <div className="container">
         <Routes>
           <Route path="/my-profile" element={<Myprofile />} />
+          <Route path="/home" element={<Home />} />
         </Routes>
       </div>
     </Router>
