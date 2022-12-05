@@ -1,0 +1,13 @@
+.navbar {
+  background-color: #eee;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  margin-right: 5%;
+}

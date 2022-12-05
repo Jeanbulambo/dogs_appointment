@@ -1,12 +1,19 @@
-import { BrowserRouter as Router, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
+import Myprofile from './components/Myprofile';
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import './components/app.css';
 
 function App() {
   return (
     <Router>
-      <h1> Hello team, we are almost done...</h1>
       <Header />
-      <Routes />
+      <div className="container">
+        <Routes>
+          <Route path="/my-profile" element={<Myprofile />} />
+        </Routes>
+      </div>
     </Router>
   );
 }
