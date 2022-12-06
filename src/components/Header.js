@@ -9,11 +9,7 @@ const Header = () => {
       text: 'My Profile',
     },
     {
-      path: '/my-profile',
-      text: 'Appointment',
-    },
-    {
-      path: '/my-profile',
+      path: '/about',
       text: 'About us',
     },
   ];
