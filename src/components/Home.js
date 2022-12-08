@@ -33,6 +33,7 @@ const Home = ({ getID }) => {
           name={hotel.name}
           description={hotel.description}
           id={hotel.id}
+          image={hotel.photo}
           getInput={getInput}
         />
       ),

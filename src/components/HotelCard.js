@@ -6,14 +6,14 @@ import PropTypes from 'prop-types';
 import './hotelcard.css';
 
 function HotelCard({
-  name, description, id, getInput,
+  name, description, id, getInput, image,
 }) {
   const handleEvent = () => {
     getInput(id);
   };
   return (
     <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
+      <Card.Img variant="top" src={image} />
       <Card.Body>
         <div className="d-flex flex-column justify-content-center">
           <Card.Title className="text-center display-4 fw-bold">{name}</Card.Title>
@@ -38,6 +38,7 @@ export default HotelCard;
 HotelCard.propTypes = {
   name: PropTypes.string,
   description: PropTypes.string,
+  image: PropTypes.string,
   id: PropTypes.number,
   getInput: PropTypes.func.isRequired,
 };
@@ -46,4 +47,5 @@ HotelCard.defaultProps = {
   name: '',
   description: '',
   id: null,
+  image: '',
 };
