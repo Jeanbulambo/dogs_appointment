@@ -10,7 +10,7 @@ export const getHotels = async () => {
   return companies;
 };
 
-export const HotelDetails = async (id) => {
+export const getHotelDetails = async (id) => {
   const details = await axios({
     method: 'GET',
     url: `http://localhost:5000/hotels/${id}`,

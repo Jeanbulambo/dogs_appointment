@@ -1,17 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import ReserveHotel from './ReserveHotel';
-import { HotelDetails } from '../api/api';
+import { getDetails } from '../redux/HotelDetails/HotelDetails';
 
 const Hotel = ({ id }) => {
   let renderedItem = '';
-  const [hotel, setHotel] = useState(null);
+  const dispatch = useDispatch();
+  const hotel = useSelector((state) => state.HotelDetails);
   useEffect(() => {
-    async function HotelsDetailsData() {
-      const results = await HotelDetails(id);
-      setHotel(results);
-    }
-    HotelsDetailsData();
+    dispatch(getDetails(id));
   }, []);
   if (hotel === null) {
     renderedItem = 'Loading';
