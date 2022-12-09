@@ -32,7 +32,9 @@ export const ReserveHotelAPI = async ({
     data: {
       animal_name, animal_type, checking_in, checking_out, hotel_id, user_id,
     },
-  });
+  })
+    .then((res) => res)
+    .catch((err) => err);
   return message;
 };
 

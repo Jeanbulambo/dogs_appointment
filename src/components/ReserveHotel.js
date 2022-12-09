@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { useNavigate } from 'react-router-dom';
-import { ReserveHotelAPI } from '../api/api';
+import { useDispatch } from 'react-redux';
+import { createReservation } from '../redux/Reservations/Reservations';
 
 function ReserveHotel({ id }) {
-  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [data, setData] = useState({
     animal_name: '',
     animal_type: '',
@@ -14,16 +14,10 @@ function ReserveHotel({ id }) {
     user_id: 1,
   });
 
-  function submit(e) {
+  async function submit(e) {
     e.preventDefault();
-    ReserveHotelAPI(data)
-      .then((res) => {
-        alert(res.statusText);
-        navigate('/my-profile');
-      })
-      .catch((err) => {
-        alert(err.message);
-      });
+    const hh = dispatch(createReservation(data));
+    console.log(hh);
   }
 
   function handleChange(e) {
