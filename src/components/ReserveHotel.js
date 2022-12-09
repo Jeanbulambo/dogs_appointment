@@ -16,8 +16,7 @@ function ReserveHotel({ id }) {
 
   async function submit(e) {
     e.preventDefault();
-    const hh = dispatch(createReservation(data));
-    console.log(hh);
+    dispatch(createReservation(data));
   }
 
   function handleChange(e) {
