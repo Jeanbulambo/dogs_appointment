@@ -1,20 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useEffect } from 'react';
 import { v4 as uuid } from 'uuid';
+import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import HotelCard from './HotelCard';
+import { getAllHotels } from '../redux/AllHotels/AllHotels';
 import './home.css';
 
 const Home = ({ getID }) => {
   let renderedItem = '';
-  const [hotels, setHotels] = useState([]);
+  const dispatch = useDispatch();
+  const hotels = useSelector((state) => state.AllHotels);
   useEffect(() => {
-    const fetchData = async () => {
-      const result = await axios('http://localhost:5000/hotels');
-      setHotels(result.data);
-    };
-
-    fetchData();
+    dispatch(getAllHotels());
   }, []);
   const getInput = (input) => {
     getID(input);

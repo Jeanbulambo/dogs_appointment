@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import { ReserveHotelAPI } from '../api/api';
 
 function ReserveHotel({ id }) {
-  const url = 'http://localhost:5000/bookings';
+  const navigate = useNavigate();
   const [data, setData] = useState({
     animal_name: '',
     animal_type: '',
@@ -15,18 +16,16 @@ function ReserveHotel({ id }) {
 
   function submit(e) {
     e.preventDefault();
-    axios.post(url, {
-      animal_name: data.animal_name,
-      animal_type: data.animal_type,
-      checking_in: data.checking_in,
-      checking_out: data.checking_out,
-      hotel_id: data.hotel_id,
-      user_id: data.user_id,
-    })
+    ReserveHotelAPI(data)
       .then((res) => {
-        console.log(res);
+        alert(res.statusText);
+        navigate('/my-profile');
+      })
+      .catch((err) => {
+        alert(err.message);
       });
   }
+
   function handleChange(e) {
     const newdata = { ...data };
     newdata[e.target.id] = e.target.value;

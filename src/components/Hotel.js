@@ -1,18 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import axios from 'axios';
 import ReserveHotel from './ReserveHotel';
+import { HotelDetails } from '../api/api';
 
 const Hotel = ({ id }) => {
   let renderedItem = '';
   const [hotel, setHotel] = useState(null);
   useEffect(() => {
-    const fetchData = async () => {
-      const result = await axios(`http://localhost:5000/hotels/${id}`);
-      setHotel(result.data);
-    };
-
-    fetchData();
+    async function HotelsDetailsData() {
+      const results = await HotelDetails(id);
+      setHotel(results);
+    }
+    HotelsDetailsData();
   }, []);
   if (hotel === null) {
     renderedItem = 'Loading';
