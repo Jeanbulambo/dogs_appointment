@@ -1,12 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
 import thunk from 'redux-thunk';
-import AllHotels from './AllHotels/AllHotels';
-import HotelDetails from './HotelDetails/HotelDetails';
-import Reservations from './Reservations/Reservations';
+import AllCompanies from './Allcompanies/Allcompanies';
+import CompanyDetails from './CompanyDetails/CompanyDetail';
+import Exchange from './Exchange/Exchange';
 
 const store = configureStore({
   reducer: {
-    AllHotels, HotelDetails, Reservations,
+    AllCompanies, CompanyDetails, Exchange,
   },
   middleware: [thunk],
 });
