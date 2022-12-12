@@ -15,7 +15,7 @@ const Hotel = (props) => {
   return (
     <div className="home">
       <div className="col-auto" id="subcontent">
-        <h3 className="" style={{ color: 'black' }} >FIND PETS HOTELS HERE</h3>
+        <h3 className="" style={{ color: 'black' }}>FIND PETS HOTELS HERE</h3>
         <p className="subtitle" style={{ color: 'black' }}>Please select one</p>
         <Card.Img
           className="img-fluid"
