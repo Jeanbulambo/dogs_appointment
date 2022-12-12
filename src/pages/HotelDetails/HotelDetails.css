@@ -1,0 +1,10 @@
+@media screen and (min-width: 768px) {
+  .Card {
+    display: flex;
+  }
+
+  img {
+  width: 650px;
+  align-items: center;
+  }
+}

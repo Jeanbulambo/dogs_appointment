@@ -1,3 +1,32 @@
 body {
   background-color: #eee;
 }
+
+Navigation {
+  position: absolute;
+  top: 12vh;
+  width: 100%;
+  padding-bottom: 5%;
+  box-sizing: border-box;
+}
+
+#root {
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 768px) {
+  #root {
+    display: flex;
+    margin-top:30px;
+    margin-left: 12px;
+  }
+
+  Navigation {
+    left: 17%;
+    top: 0;
+    bottom: 0;
+    width: 83%;
+    padding-bottom: 0;
+    gap: 15px;
+  }
+}

@@ -8,12 +8,12 @@ import './Navbar.css';
 const Navigation = () => {
   const [state, setState] = useState(1);
   return (
-    <Navbar
+    <Navbar className="navbarb"
       bg="light"
       expand="lg"
       style={{
         borderBottom: '0.01rem solid #888',
-        width: '100%',
+        width: '30%',
         padding: '0.5rem',
       }}
     >
@@ -21,7 +21,7 @@ const Navigation = () => {
         <img
           src={logo}
           alt="logo"
-          style={{ marginRight: '0.5rem', marginLeft: '1rem' }}
+          style={{ marginRight: '0.5rem', marginLeft: '0.5rem', width: '70%' }}
         />
       </div>
       <Navbar.Brand href="/" className="mr-auto p-2">
