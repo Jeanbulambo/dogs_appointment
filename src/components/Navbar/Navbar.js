@@ -8,15 +8,7 @@ import './Navbar.css';
 const Navigation = () => {
   const [state, setState] = useState(1);
   return (
-    <Navbar
-      bg="light"
-      expand="lg"
-      style={{
-        borderBottom: '0.01rem solid #888',
-        width: '100%',
-        padding: '0.5rem',
-      }}
-    >
+    <Navbar className="navbar">
       <div>
         <img
           src={logo}
@@ -26,11 +18,11 @@ const Navigation = () => {
       </div>
       <Navbar.Brand href="/" className="mr-auto p-2">
         <Link to="/" className="brand">
-          Hotel
+          FIND HOTELS FUR PETS
         </Link>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="Navbar toggle" />
-      <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+      <Navbar.Collapse id="basic-navbar-nav" className="navlinks">
         <Nav>
           <Nav.Link>
             <Link

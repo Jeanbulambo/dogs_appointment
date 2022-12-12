@@ -8,3 +8,36 @@
   font-weight: bold;
   font-size: 0.7rem;
 }
+
+.home {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.img-fluid {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 25px;
+  border: 2px solid;
+}
+
+#subcontent {
+  display: flex;
+  display: inline;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .home {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+  }
+}

@@ -1,4 +1,3 @@
-/* eslint linebreak-style: ["error", "windows"] */
 // import { IKContext, IKUpload } from "imagekitio-react";
 import React, { useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -25,7 +24,7 @@ const AddBookingForm = () => {
       animal_type: data.animal_type,
       animal_name: data.animal_name,
       hotel_id: parseInt(data.hotel_id),
-      user_id: 1,
+      user_id: 4,
     };
     console.log('Information');
     console.log(booking);

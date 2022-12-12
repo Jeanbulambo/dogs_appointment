@@ -9,23 +9,30 @@ const HotelDetails = () => {
   const hotel = location.state;
   console.log(location);
   return (
-    <div className="d-flex">
-      <div>
-        <img
-          className="rounded-t-lg object-cover w-full h-72"
-          src={hotel.photo}
-          alt={hotel.name}
-        />
+    <div className="row gap-3 d-md-flex">
+      <div className="d-flex dm">
+        <div>
+          <img
+            className="rounded-t-lg object-cover w-full h-72 mx-auto d-md-none"
+            src={hotel.photo}
+            alt={hotel.name}
+          />
+          <img
+            className="rounded-t-lg object-cover w-full h-72 d-none d-md-block"
+            src={hotel.photo}
+            alt={hotel.name}
+          />
+        </div>
+        <Card style={{ width: '22rem' }} className="mx-auto w-full">
+          <Card.Header>{hotel.name}</Card.Header>
+          <ListGroup variant="flush">
+            <ListGroup.Item>{hotel.description}</ListGroup.Item>
+            <ListGroup.Item>{hotel.price}</ListGroup.Item>
+            <ListGroup.Item>{hotel.rating}</ListGroup.Item>
+            <ListGroup.Item>{hotel.location}</ListGroup.Item>
+          </ListGroup>
+        </Card>
       </div>
-      <Card style={{ width: '18rem' }}>
-        <Card.Header>{hotel.name}</Card.Header>
-        <ListGroup variant="flush">
-          <ListGroup.Item>{hotel.description}</ListGroup.Item>
-          <ListGroup.Item>{hotel.price}</ListGroup.Item>
-          <ListGroup.Item>{hotel.rating}</ListGroup.Item>
-          <ListGroup.Item>{hotel.location}</ListGroup.Item>
-        </ListGroup>
-      </Card>
     </div>
   );
 };
