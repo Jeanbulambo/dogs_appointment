@@ -2,7 +2,7 @@ body {
   background-color: #eee;
 }
 
-Navigation {
+navigation {
   position: absolute;
   top: 12vh;
   width: 100%;
@@ -17,11 +17,11 @@ Navigation {
 @media screen and (min-width: 768px) {
   #root {
     display: flex;
-    margin-top:30px;
+    margin-top: 30px;
     margin-left: 12px;
   }
 
-  Navigation {
+  navigation {
     left: 17%;
     top: 0;
     bottom: 0;
