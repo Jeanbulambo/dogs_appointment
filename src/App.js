@@ -1,6 +1,4 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import Header from './components/Header';
-// import Myprofile from './components/Myprofile';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './components/app.css';
@@ -16,18 +14,18 @@ function NotFound() {
 
 function App() {
   return (
-    <Router>
-      <Navigation />
-      <div className="container">
+    <div className="App">
+      <Router>
+        <Navigation />
         <Routes>
-          <Route path="/" element={<Hotels />} />
+          <Route className="hotel_container" path="/" element={<Hotels />} />
           <Route path="/add-hotel" element={<AddHotelForm />} />
           <Route path="/add-booking" element={<AddBookingForm />} />
           <Route path="/details" element={<HotelDetails />} />
           <Route path="*" component={NotFound} />
         </Routes>
-      </div>
-    </Router>
+      </Router>
+    </div>
   );
 }
 

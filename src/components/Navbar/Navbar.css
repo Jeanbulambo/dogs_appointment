@@ -1,22 +1,55 @@
-.brand {
-  color: #23272b;
-  text-decoration: none;
-  padding: 0;
-  font-size: 2rem;
-  font-weight: 700;
+.navbar {
+  display: none !important;
+  width: 80%;
 }
 
-.nonActive {
-  text-decoration: none;
-}
+@media screen and (min-width: 768px) {
+  .navbar {
+    display: block !important;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(250, 240, 240, 0.3);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 1% 10% 10% 3%;
+  }
+  
+  .navbar_card {
+    margin: 0 auto;
+    width: 70%;
+    top: 390px;
+  }
 
-.active {
-  text-decoration: underline;
-}
+  .link-hotel-container {
+    padding: 6px 6px 6px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: flex;
+    flex-direction: column;
+  }
 
-.line {
-  width: 0.125rem;
-  height: 0.8rem;
-  margin: 1rem 0.3rem 0 0.3rem;
-  border: solid 1px #23272b;
+  .logo {
+    margin: auto;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .link-hotel {
+    font-size: 12px;
+    text-decoration: none;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+  }
+
+  .link-hotel.active {
+    color: #fff !important;
+    background: rgb(20, 179, 28) !important;
+  }
 }

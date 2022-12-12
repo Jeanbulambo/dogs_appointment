@@ -1,8 +1,9 @@
+import React from 'react';
 import PropTypes from 'prop-types';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Card } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
-import './Rocket.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import Card from '../../UI/Card';
+import './Hotel.css';
 import { RemoveHotel } from '../../redux/hotels/hotels';
 
 const Hotel = (props) => {
@@ -13,27 +14,37 @@ const Hotel = (props) => {
     dispatch(RemoveHotel(id));
   };
   return (
-    <div className="row no-gutters">
-      <div className="col-auto">
-        <Card.Img
-          className="img-fluid"
-          style={{ width: '15rem', height: '10rem' }}
-          src={hotel.photo}
-          alt={hotel.name}
-        />
+    <Card>
+      <div className="image-card">
+        <div className="img-container">
+          <div className="img-inner">
+            <div className="inner-img">
+              <img
+                className="img-fluid"
+                src={hotel.photo}
+                alt={hotel.name}
+              />
+            </div>
+          </div>
+        </div>
+        <div className="text-container">
+          <h3>{hotel.name}</h3>
+          <div>
+            <p>Price : $ {hotel.price}</p>
+            <p> 📍 {hotel.location}</p>
+          </div>
+          <div className="star-rating">
+            {[...Array(5)].map((star) => {        
+              return (         
+                <span className="star">&#9733;</span>        
+              );
+            })}
+          </div>
+          <button onClick={(e) => handleDelete(e, hotel.id)}>Delete</button>
+        </div>
       </div>
-      <div className="col">
-        <Card.Body>
-          <Card.Title className="h2" style={{ marginBottom: '1rem' }}>
-            {hotel.name}
-          </Card.Title>
-          <Card.Text style={{ textAlign: 'justify' }}>
-            {hotel.description}
-          </Card.Text>
-          <Button onClick={(e) => handleDelete(e, hotel.id)}>Delete</Button>
-        </Card.Body>
-      </div>
-    </div>
+
+    </Card>
   );
 };
 
