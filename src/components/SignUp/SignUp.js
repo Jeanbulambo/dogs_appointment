@@ -69,7 +69,7 @@ const SignUp = () => {
           <input type="submit" value="Sing Up" />
 
           <div>
-            <Link to="/greetings">Sign In</Link>
+            <Link to="/">Sign In</Link>
           </div>
         </form>
       </div>
