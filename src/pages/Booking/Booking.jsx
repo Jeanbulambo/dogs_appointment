@@ -3,9 +3,11 @@
 import React, { useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 // import { useNavigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import DatePicker from 'react-multi-date-picker';
+import { isAuthenticated } from '../../redux/current_user/current_user';
 import { AddBooking } from '../../redux/bookings/bookings';
 
 const AddBookingForm = () => {
@@ -24,7 +26,7 @@ const AddBookingForm = () => {
       checking_out: data.checking_out,
       animal_type: data.animal_type,
       animal_name: data.animal_name,
-      hotel_id: parseInt(data.hotel_id),
+      hotel_id: parseInt(data.hotel_id, 10),
       user_id: 1,
     };
     console.log('Information');
@@ -86,4 +88,12 @@ const AddBookingForm = () => {
   );
 };
 
-export default AddBookingForm;
+export default function Booking() {
+  const authenticated = isAuthenticated();
+
+  if (!authenticated) {
+    return <Navigate to="/sign-in" />;
+  }
+
+  return <AddBookingForm />;
+}

@@ -1,26 +1,23 @@
-body {
-  background-color: #eee;
+.app-div {
+  min-height: 100vh;
+  background-color: #fafafa;
 }
 
-.App {
+.main{
+  min-height: calc(100vh - 4rem);
   display: flex;
-  flex-direction: column;
-  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
 }
-
-
 
 @media screen and (min-width: 768px) {
-  .App {
+  .app-container {
     display: flex;
-    flex-direction: row;
-    width: 100%;
   }
 
-  .container {
-    border: 2px solid rgb(87, 251, 6);
-    display: flex;
+  .main-container {
+    height: 100vh;
     width: 100%;
-  }
-  
+  }  
 }
