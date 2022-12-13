@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.2.1",
     "bootstrap": "^5.2.3",
+    "hamburger-react": "^2.5.0",
     "imagekitio-react": "^2.0.0",
     "mdb-react-ui-kit": "^5.0.0",
     "moment": "^2.29.4",

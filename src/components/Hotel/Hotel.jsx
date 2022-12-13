@@ -21,7 +21,7 @@ const Hotel = (props) => {
             <div className="inner-img">
               <img
                 className="img-fluid"
-                src={hotel.photo}
+                src={hotel.photo[0]}
                 alt={hotel.name}
               />
             </div>

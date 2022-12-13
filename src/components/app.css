@@ -4,20 +4,16 @@ body {
 
 .App {
   display: flex;
+  flex-direction: column;
   width: 100%;
 }
 
-/* .ham-nav {
-  border: 3px solid blue;
-} */
 
-/* .container {
-  border: 2px solid red;
-} */
 
 @media screen and (min-width: 768px) {
   .App {
     display: flex;
+    flex-direction: row;
     width: 100%;
   }
 
@@ -26,9 +22,5 @@ body {
     display: flex;
     width: 100%;
   }
-
-  .hotel_containe {
-    display: flex !important;
-    flex-direction: row !important;
-  }
+  
 }

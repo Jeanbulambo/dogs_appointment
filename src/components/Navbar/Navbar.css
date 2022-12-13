@@ -1,11 +1,9 @@
 .navbar {
-  display: none !important;
   width: 80%;
 }
 
 @media screen and (min-width: 768px) {
   .navbar {
-    display: block !important;
     width: 200px;
     position: fixed;
     z-index: 1;
@@ -17,12 +15,13 @@
     flex-direction: column;
     padding: 20px;
     border-radius: 1% 10% 10% 3%;
+    align-items: center;
   }
   
   .navbar_card {
-    margin: 0 auto;
-    width: 100%;
-    top: 390px;
+    width: 200px;
+    padding: 10px;
+    margin-top: 80%;
   }
 
   .link-hotel-container {
@@ -32,12 +31,14 @@
     color: #818181;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    height: 100vh;
   }
 
   .logo {
     margin: auto;
     width: 100%;
-    padding: 20px;
+    padding: 10px;
   }
 
   .link-hotel {
@@ -46,6 +47,7 @@
     text-align: center;
     margin: auto;
     padding: 10px;
+    width: 100%;
   }
 
   .link-hotel.active {
