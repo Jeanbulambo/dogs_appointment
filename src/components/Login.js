@@ -16,12 +16,15 @@ const Login = ({ setCurrUser, setShow }) => {
       });
       const data = await response.json();
       if (!response.ok) throw data.error;
-
+      /* eslint-disable no-console */
       console.log(response.headers.get('Authorization'));
+      /* eslint-disable no-console */
       localStorage.setItem('token', response.headers.get('Authorization'));
       setCurrUser(data);
     } catch (error) {
+      /* eslint-disable no-console */
       console.log('error', error);
+      /* eslint-enable no-console */
     }
   };
   const handleSubmit = (e) => {

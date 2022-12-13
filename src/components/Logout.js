@@ -15,7 +15,9 @@ const Logout = ({ setCurrUser }) => {
       localStorage.removeItem('token');
       setCurrUser(null);
     } catch (error) {
+      /* eslint-disable no-console */
       console.log('error', error);
+      /* eslint-enable no-console */
     }
   };
   const handleClick = (e) => {

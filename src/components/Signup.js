@@ -20,7 +20,9 @@ const Signup = ({ setCurrUser, setShow }) => {
       localStorage.setItem('token', response.headers.get('Authorization'));
       setCurrUser(data);
     } catch (error) {
+      /* eslint-disable no-console */
       console.log('error', error);
+      /* eslint-disable no-console */
     }
   };
   const handleSubmit = (e) => {

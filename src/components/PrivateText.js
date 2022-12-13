@@ -16,7 +16,9 @@ const PrivateText = ({ currUser }) => {
       if (!response.ok) throw data.error;
       setMessage(data.message);
     } catch (error) {
+      /* eslint-disable no-console */
       console.log('error', error);
+      /* eslint-disable no-console */
       setMessage(error);
     }
   };
