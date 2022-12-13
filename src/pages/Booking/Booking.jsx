@@ -92,7 +92,7 @@ export default function Booking() {
   const authenticated = isAuthenticated();
 
   if (!authenticated) {
-    return <Navigate to="/sign-in" />;
+    return <Navigate to="/" />;
   }
 
   return <AddBookingForm />;

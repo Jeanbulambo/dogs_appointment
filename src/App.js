@@ -20,12 +20,12 @@ function App() {
         <Navigation />
         <main className="main">
           <Routes>
-            <Route path="/" element={<Hotels />} />
+            <Route path="/hotels" element={<Hotels />} />
             <Route path="/about" element={<About />} />
             <Route path="/add-hotel" element={<AddHotelForm />} />
             <Route path="/add-booking" element={<Booking />} />
             <Route path="/details" element={<HotelDetails />} />
-            <Route path="/sign-in" element={<SignInPage />} />
+            <Route path="/" element={<SignInPage />} />
             <Route path="/sign-up" element={<SignUpPage />} />
           </Routes>
         </main>

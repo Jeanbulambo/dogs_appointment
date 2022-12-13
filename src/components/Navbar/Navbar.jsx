@@ -94,7 +94,7 @@ const Navigation = () => {
           </>
         ) : (
           <li>
-            <NavLink className={({ isActive }) => (isActive ? 'active' : 'non-active')} to="/sign-in" onClick={toggleMenu}>
+            <NavLink className={({ isActive }) => (isActive ? 'active' : 'non-active')} to="/" onClick={toggleMenu}>
               <span>SIGN IN</span>
             </NavLink>
           </li>

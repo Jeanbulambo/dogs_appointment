@@ -31,7 +31,7 @@ const SignIn = () => {
       });
   };
   if (authenticated) {
-    return <Navigate to="/" />;
+    return <Navigate to="/hotels" />;
   }
   return (
     <div>
@@ -52,7 +52,7 @@ const SignIn = () => {
         <div>
           Not a member?
           {' '}
-          <Link to="/sing-up">Sign up</Link>
+          <Link to="/sign-up">Sign up</Link>
         </div>
       </form>
     </div>
