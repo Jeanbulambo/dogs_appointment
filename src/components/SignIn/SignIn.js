@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { Link, Navigate } from 'react-router-dom';
 import { postSignIn } from '../../redux/registration/registration';
 import { isAuthenticated } from '../../redux/current_user/current_user';
-
+import './signin.css';
 const SignIn = () => {
   const dispatch = useDispatch();
   const formRef = useRef();
@@ -34,27 +34,29 @@ const SignIn = () => {
     return <Navigate to="/hotels" />;
   }
   return (
-    <div>
-      <h1>Log In</h1>
-      <form ref={formRef} onSubmit={handleSubmit}>
-        <input
-          placeholder="email"
-          type="email"
-          name="email"
+    <div className="signin-bg">
+      <div className="form-signin">
+        <h1>Log In</h1>
+        <form ref={formRef} onSubmit={handleSubmit} className="signin">
+          <input
+            placeholder="email"
+            type="email"
+            name="email"
 
-        />
-        <input
-          placeholder="Password"
-          type="password"
-          name="password"
-        />
-        <input type="submit" value="Sign In" />
-        <div>
-          Not a member?
-          {' '}
-          <Link to="/sign-up">Sign up</Link>
-        </div>
-      </form>
+          />
+          <input
+            placeholder="Password"
+            type="password"
+            name="password"
+          />
+          <input type="submit" value="Sign In" className="submit-form"/>
+          <div>
+            Not a member?
+            {' '}
+            <Link to="/sign-up">Sign up</Link>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };
