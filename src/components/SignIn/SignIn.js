@@ -1,9 +1,11 @@
+/* eslint-disable linebreak-style */
 import React, { useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link, Navigate } from 'react-router-dom';
 import { postSignIn } from '../../redux/registration/registration';
 import { isAuthenticated } from '../../redux/current_user/current_user';
 import './signin.css';
+
 const SignIn = () => {
   const dispatch = useDispatch();
   const formRef = useRef();
@@ -49,7 +51,7 @@ const SignIn = () => {
             type="password"
             name="password"
           />
-          <input type="submit" value="Sign In" className="submit-form"/>
+          <input type="submit" value="Sign In" className="submit-form" />
           <div>
             Not a member?
             {' '}

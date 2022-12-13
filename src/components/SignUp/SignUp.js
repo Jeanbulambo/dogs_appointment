@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import React, { useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
@@ -15,7 +16,6 @@ const SignUp = () => {
     const user = {
       name: data.name,
       phone: data.phone,
-      photo: data.photo,
       email: data.email,
       password: data.password,
       password_confirmation: data.password_confirmation,
@@ -40,12 +40,6 @@ const SignUp = () => {
             placeholder="Phone"
             type="text"
             name="phone"
-          />
-
-          <input
-            placeholder="Photo"
-            type="text"
-            name="photo"
           />
 
           <input
