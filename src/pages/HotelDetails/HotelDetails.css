@@ -1,10 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+
+#details-title {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 12px;
+}
+
 @media screen and (min-width: 768px) {
   .Card {
     display: flex;
+    gap: 12px;
   }
 
   img {
-    width: 650px;
+    width: 600px;
     align-items: center;
+  }
+
+  #listgroup {
+    border: none !important;
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    gap: 4px;
+    width: 100% !important;
+  }
+
+  #details-title {
+    font-size: 1.5rem;
+    margin-top: 15px;
+    gap: 6px;
+    margin-left: 240px !important;
+    margin-bottom: 12px;
+  }
+
+  .card {
+    width: 100%;
   }
 }

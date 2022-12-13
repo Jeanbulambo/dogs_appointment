@@ -19,14 +19,14 @@ const HotelDetails = () => {
           alt={hotel.name}
         />
       </div>
-      <div className="card-body d-md-flex flex-column">
-        <Card style={{ width: '22rem' }}>
-          <Card.Header>{hotel.name}</Card.Header>
+      <div className="card">
+        <Card style={{ width: '22rem' }} className="border-white" id="listgroup">
+          <div id="details-title">{hotel.name}</div>
           <ListGroup variant="flush">
             <ListGroup.Item>{hotel.description}</ListGroup.Item>
-            <ListGroup.Item>{hotel.price}</ListGroup.Item>
-            <ListGroup.Item>{hotel.rating}</ListGroup.Item>
-            <ListGroup.Item>{hotel.location}</ListGroup.Item>
+            <ListGroup.Item className="list-group-item list-group-item-secondary"><span>Price : $ </span>{hotel.price}</ListGroup.Item>
+            <ListGroup.Item><span>Rating : </span>{hotel.rating}</ListGroup.Item>
+            <ListGroup.Item className="list-group-item list-group-item-secondary"><span>Location : </span>{hotel.location}</ListGroup.Item>
           </ListGroup>
         </Card>
       </div>

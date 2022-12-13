@@ -8,7 +8,8 @@ import './Navbar.css';
 const Navigation = () => {
   const [state, setState] = useState(1);
   return (
-    <Navbar className="navbarb"
+    <Navbar
+      className="navbarb"
       bg="light"
       expand="lg"
       style={{

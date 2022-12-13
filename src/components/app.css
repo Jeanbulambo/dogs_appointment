@@ -1,8 +1,8 @@
 body {
-  background-color: #eee;
+  background-color: white;
 }
 
-navigation {
+.navigation {
   position: absolute;
   top: 12vh;
   width: 100%;
@@ -21,7 +21,7 @@ navigation {
     margin-left: 12px;
   }
 
-  navigation {
+  .navigation {
     left: 17%;
     top: 0;
     bottom: 0;

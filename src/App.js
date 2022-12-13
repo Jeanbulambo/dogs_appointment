@@ -17,7 +17,7 @@ function NotFound() {
 function App() {
   return (
     <Router>
-      <Navigation />
+      <Navigation className="navigation" />
       <div className="container">
         <Routes>
           <Route path="/" element={<Hotels />} />
