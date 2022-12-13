@@ -6,7 +6,7 @@ import Navigation from './components/Navbar/Navbar';
 import Hotels from './components/Hotels/Hotels';
 import AddHotelForm from './pages/AddHotel/AddHotelForm';
 import AddBookingForm from './pages/AddBooking/AddBookingForm';
-import HotelDetails from './pages/HotelDetails/HotelDetails';
+import HotelDetails from './components/HotelDetails/HotelDetails';
 
 function NotFound() {
   return <>Page not found</>;

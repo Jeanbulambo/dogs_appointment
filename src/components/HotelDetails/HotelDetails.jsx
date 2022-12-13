@@ -1,5 +1,6 @@
 /* eslint linebreak-style: ["error", "windows"] */
 import { useLocation } from 'react-router-dom';
+import { FaChevronRight, FaChevronLeft} from 'react-icons/fa';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
@@ -34,9 +35,26 @@ const HotelDetails = () => {
       <div className="card-img-details">
         <img
           className="img-details"
-          src={hotel.photo}
+          src={hotel.photo[0]}
           alt={hotel.name}
         />
+        <img
+          className="img-details"
+          src={hotel.photo[1]}
+          alt={hotel.name}
+        />
+        <img
+          className="img-details"
+          src={hotel.photo[2]}
+          alt={hotel.name}
+        />
+        <img
+          className="img-details"
+          src={hotel.photo[3]}
+          alt={hotel.name}
+        />
+        <FaChevronLeft className="left-arrow" />
+        <FaChevronRight className="right-arrow" />
       </div>
       <div class="product-details">
 		
