@@ -4,11 +4,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './components/app.css';
-import Navigation from './components/Navbar/Navbar';
-import AddHotelForm from './pages/AddHotel/AddHotelForm';
-import AddBookingForm from './pages/AddBooking/AddBookingForm';
-import HotelDetails from './pages/HotelDetails/HotelDetails';
-import Login from './components/Login';
+import Navigation from './Navbar/Navbar';
+import Hotels from './Hotels/Hotels';
+import AddHotelForm from '../pages/AddHotel/AddHotelForm';
+import AddBookingForm from '../pages/AddBooking/AddBookingForm';
+import HotelDetails from '../pages/HotelDetails/HotelDetails';
 
 function NotFound() {
   return <>Page not found</>;
@@ -20,7 +20,7 @@ function App() {
       <Navigation className="navigation" />
       <div className="container">
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/" element={<Hotels />} />
           <Route path="/add-hotel" element={<AddHotelForm />} />
           <Route path="/add-booking" element={<AddBookingForm />} />
           <Route path="/details" element={<HotelDetails />} />
