@@ -5,9 +5,9 @@ import Hamburger from 'hamburger-react';
 import logo from '../images/logo.png';
 import './Navbar.css';
 
-
 const Navigation = () => {
   const [isOpen, setOpen] = useState(false);
+
   return (
     <Navbar className="navbar">
       <div className="navbar_card">
@@ -16,7 +16,7 @@ const Navigation = () => {
           alt="logo"
           className="logo"
         />
-        {/* <Hamburger id="hamburger" toggled={isOpen} toggle={setOpen} direction="right" /> */}
+        <Hamburger toggled={isOpen} toggle={setOpen} className="hamburger-nav" direction="right" />
         <div className="link-hotel-container">
           <NavLink
             to="/"
