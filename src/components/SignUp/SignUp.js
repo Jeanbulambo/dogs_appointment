@@ -22,7 +22,7 @@ const SignUp = () => {
     };
     console.log(user);
     dispatch(postSignUp(user));
-    navigate('/sign-in');
+    navigate('/');
   };
 
   return (
