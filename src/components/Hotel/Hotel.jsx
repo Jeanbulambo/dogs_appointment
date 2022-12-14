@@ -24,7 +24,7 @@ const Hotel = (props) => {
         </div>
         <div className="text-container">
           <h3>{hotel.name}</h3>
-          <div>
+          <div className="text-container">
             <p>Price : ${hotel.price}</p>
             <p>
               {' '}

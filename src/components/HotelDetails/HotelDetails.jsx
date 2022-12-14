@@ -1,4 +1,4 @@
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { Rating } from '@mui/material';
 import { RemoveHotel } from '../../redux/hotels/hotels';
@@ -113,12 +113,28 @@ const HotelDetails = () => {
         <h1>{hotel.name}</h1>
         <div className="star-rating">
           <Rating name="read-only" value={hotel.rating} readOnly />
-        </div>
+        </div>  
+          <div className="argo">
+            <p>Price : ${hotel.price}</p>
+            <p>
+              {' '}
+              📍
+              {hotel.location}
+            </p>
+          </div>
+          <div className="argo">
+            <button className="button" type="button" onClick={(e) => handleDelete(e, hotel.id)}>
+              <Link to="/add-booking" className="book-now">
+                Book Now
+              </Link>
+            </button>
+            <button className="button" type="button" onClick={(e) => handleDelete(e, hotel.id)}>
+              Delete
+            </button>
+          </div>
+          
         <p className="information">{hotel.description}</p>
       </div>
-      <button type="button" onClick={(e) => handleDelete(e, hotel.id)}>
-        Delete
-      </button>
     </div>
   );
 };
