@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700&display=swap');
+
 /* CSS variables */
 :root {
   --white: #fff;
   --black: #121212;
-  --light-grey: #E4E4E5;
-  --grey: #61656F;
-  --green: #9FC328;
+  --light-grey: #e4e4e5;
+  --grey: #61656f;
+  --green: #9fc328;
   --family-font: 'Roboto Slab', serif;
 }
 

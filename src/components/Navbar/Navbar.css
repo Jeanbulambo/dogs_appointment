@@ -48,7 +48,7 @@
   background-color: #fff;
 }
 
-a{
+a {
   text-align: center;
 }
 
@@ -76,7 +76,6 @@ a{
     border-radius: 1% 10% 10% 3%;
     align-items: center;
     display: flex;
-    flex-direction: column;
   }
 
   .hamburger-menu {
@@ -97,22 +96,20 @@ a{
     box-shadow: var(--box-shadow-1);
     z-index: 20;
     animation: left 1.5s ease-in;
-   
   }
 
   .logo-img {
     width: 100%;
   }
 
- .nav-ul {
-  display: block;
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  top: 10px;;
- }
+  .nav-ul {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    top: 10px;
+  }
 
-  
   .active-link.active {
     color: #fff !important;
     background: var(--green);

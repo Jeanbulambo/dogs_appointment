@@ -1,16 +1,16 @@
 .container-fluid {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    width: 100%;
-    border: solid 1px red;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  border: solid 1px red;
 }
 
 @media screen and (min-width: 768px) {
-    .container-fluid {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin: auto;
-    }
+  .container-fluid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+  }
 }

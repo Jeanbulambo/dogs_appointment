@@ -1,12 +1,11 @@
 
-
 .App {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.main{
+.main {
   min-height: calc(100vh - 4rem);
   display: flex;
   align-items: center;
@@ -27,5 +26,5 @@
   .main-container {
     height: 100vh;
     width: 100%;
-  }  
+  }
 }
