@@ -16,8 +16,8 @@
     filter: blur(8px);
 }
 @keyframes changeBg {
-    0% { background-image: url('../../components/images/cat-dog.jpg');}
-        25% {background-image: url('../../components/images/images.jpeg');}
-        50% {background-image: url('../../components/images/pexels-muhannad-alatawi-58997.jpg');}
+    0% { background-image: url('../../components/images/istockphoto-1096145492-612x612.jpg');}
+        25% {background-image: url('../../components/images/istockphoto-162493534-612x612.jpg');}
+        50% {background-image: url('../../components/images/26562801_web1_20210929-BLVD-Pet-Friendly-Travel_1.jpg');}
         75% {background-image: url('../../components/images/istockphoto-1059650764-170667a.jpg');}
 }

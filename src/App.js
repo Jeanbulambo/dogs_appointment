@@ -3,6 +3,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import { ReactLocation } from 'react-location';
 import './components/app.css';
 import Navigation from './components/Navbar/Navbar';
 import Hotels from './components/Hotels/Hotels';
@@ -14,9 +15,10 @@ import About from './pages/About/About';
 import Booking from './pages/Booking/Booking';
 
 function App() {
+  const location = new ReactLocation();
   return (
-    <div className="app-div">
-      <Router>
+    <div className="App">
+      <Router location={location}>
         <Navigation />
         <main className="main">
           <Routes>
