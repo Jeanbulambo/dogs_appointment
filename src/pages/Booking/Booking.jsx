@@ -1,6 +1,6 @@
 /* eslint linebreak-style: ["error", "windows"] */
 // import { IKContext, IKUpload } from "imagekitio-react";
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 // import { useNavigate } from 'react-router-dom';
 import { Navigate } from 'react-router-dom';
@@ -9,15 +9,19 @@ import Form from 'react-bootstrap/Form';
 import DatePicker from 'react-multi-date-picker';
 import { isAuthenticated } from '../../redux/current_user/current_user';
 import { AddBooking } from '../../redux/bookings/bookings';
+import { FetchedHotels } from '../../redux/hotels/hotels';
 
 const AddBookingForm = () => {
   const dispatch = useDispatch();
-  // const navigate = useNavigate();
-  // const bookings = useSelector((state) => state.bookings);
+  const navigate = useNavigate();
   const hotels = useSelector((state) => state.hotels);
-  // useEffect(() => {}, [bookings]);
+  useEffect(() => {
+    dispatch(FetchedHotels());
+  }, [dispatch]);
   const formRef = useRef();
   const handleSubmit = (e) => {
+    const test = localStorage.getItem('token');
+    console.log(test);
     e.preventDefault();
     const formData = new FormData(formRef.current);
     const data = Object.fromEntries(formData);
@@ -28,10 +32,8 @@ const AddBookingForm = () => {
       animal_name: data.animal_name,
       hotel_id: parseInt(data.hotel_id, 10),
     };
-    console.log('Information');
-    console.log(booking);
     dispatch(AddBooking(booking));
-    // navigate('/');
+    navigate('/my-bookings');
   };
   return (
     <Form ref={formRef} onSubmit={handleSubmit}>

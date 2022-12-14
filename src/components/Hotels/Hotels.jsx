@@ -1,6 +1,5 @@
 /* eslint linebreak-style: ["error", "windows"] */
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import HotelsList from '../HotelsList/HotelsList';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
