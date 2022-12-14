@@ -10,6 +10,7 @@ import DatePicker from 'react-multi-date-picker';
 import { isAuthenticated } from '../../redux/current_user/current_user';
 import { AddBooking } from '../../redux/bookings/bookings';
 import { FetchedHotels } from '../../redux/hotels/hotels';
+import './Booking.css';
 
 const AddBookingForm = () => {
   const dispatch = useDispatch();
@@ -36,56 +37,58 @@ const AddBookingForm = () => {
     navigate('/my-bookings');
   };
   return (
-    <Form ref={formRef} onSubmit={handleSubmit}>
-      <Form.Group className="mb-3" controlId="checking_in">
-        <Form.Label>Checking in date</Form.Label>
-        <DatePicker
-          placeholder="Checking in date"
-          format="DD/MM/YYYY"
-          name="checking_in"
-        />
-      </Form.Group>
+    <div className="form">
+      <Form ref={formRef} onSubmit={handleSubmit}>
+        <Form.Group className="mb-3" controlId="checking_in">
+          <Form.Label>Checking in date</Form.Label>
+          <DatePicker
+            placeholder="Checking in date"
+            format="DD/MM/YYYY"
+            name="checking_in"
+          />
+        </Form.Group>
 
-      <Form.Group className="mb-3" controlId="checking_out">
-        <Form.Label>Checking out date</Form.Label>
-        <DatePicker
-          placeholder="Checking out date"
-          format="DD/MM/YYYY"
-          name="checking_out"
-        />
-      </Form.Group>
+        <Form.Group className="mb-3" controlId="checking_out">
+          <Form.Label>Checking out date</Form.Label>
+          <DatePicker
+            placeholder="Checking out date"
+            format="DD/MM/YYYY"
+            name="checking_out"
+          />
+        </Form.Group>
 
-      <Form.Group className="mb-3" controlId="animal_type">
-        <Form.Label>Animal type</Form.Label>
-        <Form.Control
-          type="text"
-          placeholder="Animal type"
-          name="animal_type"
-        />
-      </Form.Group>
+        <Form.Group className="mb-3" controlId="animal_type">
+          <Form.Label>Animal type</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Animal type"
+            name="animal_type"
+          />
+        </Form.Group>
 
-      <Form.Group className="mb-3" controlId="animal_name">
-        <Form.Label>Anymal name</Form.Label>
-        <Form.Control
-          type="text"
-          placeholder="Animal name"
-          name="animal_name"
-        />
-      </Form.Group>
+        <Form.Group className="mb-3" controlId="animal_name">
+          <Form.Label>Anymal name</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Animal name"
+            name="animal_name"
+          />
+        </Form.Group>
 
-      <Form.Select aria-label="Default select example" name="hotel_id">
-        <option>Select the hotel</option>
-        {hotels.hotels.map((hotel) => (
-          <option key={hotel.id} value={hotel.id}>
-            {hotel.name}
-          </option>
-        ))}
-      </Form.Select>
+        <Form.Select aria-label="Default select example" name="hotel_id">
+          <option>Select the hotel</option>
+          {hotels.hotels.map((hotel) => (
+            <option key={hotel.id} value={hotel.id}>
+              {hotel.name}
+            </option>
+          ))}
+        </Form.Select>
 
-      <Button variant="primary" type="submit">
-        Submit
-      </Button>
-    </Form>
+        <Button variant="primary" type="submit">
+          Submit
+        </Button>
+      </Form>
+    </div>
   );
 };
 
