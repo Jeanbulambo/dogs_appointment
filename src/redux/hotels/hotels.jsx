@@ -1,99 +1,71 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable camelcase */
 /* eslint-disable no-param-reassign */
-/* eslint linebreak-style: ["error", "windows"] */
-// Import
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import url from '../../api/ApiUrl';
 
-// Action types
-const FETCHED_HOTELS = 'hotels/INDEX';
-const ADDED_HOTEL = 'hotels/CREATE';
-const REMOVED_HOTEL = 'hotels/DELETE';
-const SHOW_HOTEL = 'hotels/SHOW';
-
-// Create and export action creators
-export const FetchedHotels = createAsyncThunk(FETCHED_HOTELS, async () => {
-  try {
-    const endpoint = `${url}/hotels`;
-    const response = await axios.get(endpoint);
-    const payload = response.data.map((hotel) => ({
-      id: hotel.id,
-      name: hotel.name,
-      location: hotel.location,
-      rating: hotel.rating,
-      price: hotel.price,
-      photo: hotel.photo,
-      description: hotel.description,
-    }));
-    return payload;
-  } catch (error) {
-    return error;
-  }
-});
-
-export const AddHotel = createAsyncThunk(ADDED_HOTEL, async (hotel) => {
-  try {
-    const endpoint = `${url}/hotels`;
-    await axios.post(endpoint, hotel);
-    const payload = hotel;
-    return payload;
-  } catch (error) {
-    return error;
-  }
-});
-
-export const RemoveHotel = createAsyncThunk(REMOVED_HOTEL, async (id) => {
-  try {
-    const endpoint = `${url}/hotels/${id}`;
-    await axios.delete(endpoint);
-    const payload = id;
-    return payload;
-  } catch (error) {
-    return error;
-  }
-});
-
-export const ShowHotel = createAsyncThunk(SHOW_HOTEL, async (id) => {
-  try {
-    const endpoint = `${url}/hotels/${id}`;
-    await axios.delete(endpoint);
-    const payload = id;
-    return payload;
-  } catch (error) {
-    return error;
-  }
-});
-
-// Initialize the state
 const initialState = {
-  hotels: [],
-  loading: 'idle',
+  data: [],
+  status: 'idle',
 };
 
-const reducerHotels = createSlice({
+export const FetchedHotels = createAsyncThunk(
+  'hotels/getHotels',
+  async () => {
+    const response = await fetch(`${url}/hotels`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: localStorage.getItem('token'),
+      },
+    });
+    if (response.ok) {
+      return response.json();
+    }
+    throw response;
+  },
+);
+
+export const AddHotel = createAsyncThunk(
+  'hotels/postHotels',
+  async (object) => {
+    await fetch(`${url}/hotels`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: localStorage.getItem('token'),
+      },
+      body: JSON.stringify(object),
+    });
+  },
+);
+
+export const removeHotel = createAsyncThunk(
+  'hotels/deleteHotel',
+  async (id) => {
+    await fetch(`${url}/hotels/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json',
+        Authorization: localStorage.getItem('token'),
+      },
+    });
+  },
+);
+
+export const reducerHotels = createSlice({
   name: 'hotels',
   initialState,
   reducers: {},
-  extraReducers(builder) {
+  extraReducers: (builder) => {
     builder
-      .addCase(FetchedHotels.pending, (state) => {
-        state.status = 'Loading';
-      })
       .addCase(FetchedHotels.fulfilled, (state, action) => {
-        state.status = 'Fulfilled';
-        state.hotels = action.payload;
+        state.data = action.payload;
+        state.status = 'succeeded';
       })
-      .addCase(FetchedHotels.rejected, (state, action) => {
-        state.status = 'Rejected';
-        state.error = action.error.message;
-      })
-      .addCase(AddHotel.fulfilled, (state, action) => {
-        state.hotels.push(action.payload);
-      })
-      .addCase(RemoveHotel.fulfilled, (state, action) => {
-        state.hotels = state.hotels.filter(
-          (hotel) => hotel.id !== action.payload,
-        );
+      .addCase(FetchedHotels.pending, (state) => {
+        state.status = 'loading';
       });
   },
 });

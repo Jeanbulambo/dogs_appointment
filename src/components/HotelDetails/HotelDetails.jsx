@@ -1,8 +1,9 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { Rating } from '@mui/material';
-import { RemoveHotel } from '../../redux/hotels/hotels';
+
 import './HotelDetails.css';
+import { removeHotel } from '../../redux/hotels/hotels';
 /* eslint linebreak-style: ["error", "windows"] */
 const HotelDetails = () => {
   const location = useLocation();
@@ -11,7 +12,7 @@ const HotelDetails = () => {
   const dispatch = useDispatch();
   const handleDelete = (e, id) => {
     e.preventDefault();
-    dispatch(RemoveHotel(id));
+    dispatch(removeHotel(id));
   };
   return (
     <div className="card_details">

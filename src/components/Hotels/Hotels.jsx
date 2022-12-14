@@ -9,13 +9,14 @@ import './Hotels.css';
 
 const Hotels = () => {
   const dispatch = useDispatch();
-  const hotelsStatus = useSelector((state) => state.hotels);
+  const hotels = useSelector((state) => state.hotels.data);
+  console.log(hotels);
   useEffect(() => {
     dispatch(FetchedHotels());
   }, [dispatch]);
   return (
     <div className="container">
-      {hotelsStatus.hotels.map((hotel) => (
+      {hotels.map((hotel) => (
         <Link
           to="/details"
           key={hotel.id}
