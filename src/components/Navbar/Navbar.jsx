@@ -38,49 +38,54 @@ const Navigation = () => {
       <ul className="nav-ul">
         <li>
           <NavLink
-            className={({ isActive }) => (isActive ? 'active' : 'non-active')}
+            // className={({ isActive }) => (isActive ? 'active-link' : 'non-active')}
+            className="active-link"
             to="/"
             onClick={toggleMenu}
           >
-            <span>HOME</span>
+            HOME
           </NavLink>
         </li>
         <li>
           <NavLink
-            className={({ isActive }) => (isActive ? 'active' : 'non-active')}
+            // className={({ isActive }) => (isActive ? 'active-link' : 'non-active')}
+            className="active-link"
             to="/about"
             onClick={toggleMenu}
           >
-            <span>ABOUT</span>
+            ABOUT
           </NavLink>
         </li>
         <li>
           <NavLink
-            className={({ isActive }) => (isActive ? 'active-link' : 'none')}
+            // className={({ isActive }) => (isActive ? 'active-link' : 'non-active')}
+            className="active-link"
             to="/add-booking"
             onClick={toggleMenu}
           >
-            <span>BOOKING</span>
+            BOOKING
           </NavLink>
         </li>
         {authenticated ? (
           <>
             <li>
               <NavLink
-                className={({ isActive }) => (isActive ? 'active-link' : 'none')}
+                // className={({ isActive }) => (isActive ? 'active-link' : 'non-active')}
+                className="active-link"
                 to="/add-booking"
                 onClick={toggleMenu}
               >
-                <span>BOOKINGS</span>
+                MY BOOKINGS
               </NavLink>
             </li>
             <li>
               <NavLink
-                className={({ isActive }) => (isActive ? 'active-link' : 'none')}
+                // className={({ isActive }) => (isActive ? 'active-link' : 'non-active')}
+                className="active-link"
                 to="/add-hotel"
                 onClick={toggleMenu}
               >
-                <span>ADD HOTEL</span>
+                ADD HOTEL
               </NavLink>
             </li>
             <li>
@@ -94,8 +99,13 @@ const Navigation = () => {
           </>
         ) : (
           <li>
-            <NavLink className={({ isActive }) => (isActive ? 'active' : 'non-active')} to="/" onClick={toggleMenu}>
-              <span>SIGN IN</span>
+            <NavLink 
+              // className={({ isActive }) => (isActive ? 'active' : 'non-active')}
+              className="active-link"
+              to="/" 
+              onClick={toggleMenu}
+            >
+              SIGN IN
             </NavLink>
           </li>
         )}
