@@ -180,25 +180,14 @@
   color: darkslategray;
 }
 
-<<<<<<< HEAD
-/* @media (min-width: 768px) {
-  .hamburger-menu{
-    display: none;
-  }
-
-  .logo-div{
-    display: block;
-  }
-
-=======
 @media screen and (min-width: 768px) {
->>>>>>> fd44c5a859da4b3bbaa2f364a10f50bbf5ed1728
   .navbar {
-    width: 50%;
+    width: 25%;
     height: 100vh;
     flex-direction: column;
     justify-content: center;
     position: relative;
+    border: 1px solid red;
   }
 
   .hamburger-menu {
@@ -226,9 +215,6 @@
     font-size: 12px;
     width: 100%;
   }
-<<<<<<< HEAD
-} */
-=======
  
   .navbar.toggle {
     position: relative;
@@ -250,11 +236,10 @@
 
 
   .active-link {
-    background-color: green;
+    background-color: #9FC328;
   }
 
   .logo-img {
     z-index: 20;
   }
 }
->>>>>>> fd44c5a859da4b3bbaa2f364a10f50bbf5ed1728

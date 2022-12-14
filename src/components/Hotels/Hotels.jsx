@@ -15,7 +15,7 @@ const Hotels = () => {
     dispatch(FetchedHotels());
   }, [dispatch]);
   return (
-    <div className="container-fluid">
+    <div className="container">
       {hotelsStatus.hotels.map((hotel) => (
         <Link
           to="/details"

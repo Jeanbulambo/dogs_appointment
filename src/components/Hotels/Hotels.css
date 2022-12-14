@@ -1,12 +1,11 @@
-.container-fluid {
+.container {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    width: 100%;
 }
 
 @media screen and (min-width: 768px) {
-    .container-fluid {
+    .container {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
