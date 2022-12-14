@@ -27,7 +27,7 @@ const AddHotelForm = () => {
       description: data.description,
     };
     dispatch(AddHotel(hotel));
-    navigate('/');
+    navigate('/hotels');
   };
   return (
     <Form ref={formRef} onSubmit={handleSubmit}>

@@ -49,7 +49,7 @@ a.active:hover {
   display: none;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .hamburger-menu{
     display: none;
   }
@@ -75,4 +75,4 @@ a.active:hover {
     padding: 0;
     width: 100%;
   }
-}
+} */

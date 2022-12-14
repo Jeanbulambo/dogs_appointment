@@ -27,7 +27,6 @@ const AddBookingForm = () => {
       animal_type: data.animal_type,
       animal_name: data.animal_name,
       hotel_id: parseInt(data.hotel_id, 10),
-      user_id: 1,
     };
     console.log('Information');
     console.log(booking);

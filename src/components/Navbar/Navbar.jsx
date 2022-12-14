@@ -1,6 +1,6 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable no-unused-expressions */
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { isAuthenticated } from '../../redux/current_user/current_user';
@@ -11,6 +11,7 @@ import './Navbar.css';
 const Navigation = () => {
   const authenticated = isAuthenticated();
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [showMenu, setShow] = useState(false);
 
   const toggleMenu = () => {
@@ -20,7 +21,8 @@ const Navigation = () => {
   const handleSubmit = (e) => {
     e.preventDefault;
     dispatch(deleteSession());
-    window.location.href = '/sign-in';
+    // window.location.href = '/';
+    navigate('/');
   };
   return (
     <nav className={showMenu ? 'navbar toggle' : 'navbar'}>
@@ -68,10 +70,10 @@ const Navigation = () => {
             <li>
               <NavLink
                 className={({ isActive }) => (isActive ? 'active-link' : 'none')}
-                to="/add-booking"
+                to="/my-bookings"
                 onClick={toggleMenu}
               >
-                <span>BOOKINGS</span>
+                <span>MY BOOKINGS</span>
               </NavLink>
             </li>
             <li>

@@ -1,5 +1,5 @@
+/* eslint-disable linebreak-style */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-// import url from '../../api/ApiUrl';
 
 const initialState = [];
 

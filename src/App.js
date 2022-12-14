@@ -12,6 +12,7 @@ import SignInPage from './pages/Signin/SignInPage';
 import SignUpPage from './pages/SignUp/SignUpPage';
 import About from './pages/About/About';
 import Booking from './pages/Booking/Booking';
+import Bookings from './components/Bookings/Bookings';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route path="/details" element={<HotelDetails />} />
             <Route path="/" element={<SignInPage />} />
             <Route path="/sign-up" element={<SignUpPage />} />
+            <Route path="/my-bookings" element={<Bookings />} />
           </Routes>
         </main>
       </Router>

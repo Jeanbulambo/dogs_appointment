@@ -1,13 +1,21 @@
 /* eslint linebreak-style: ["error", "windows"] */
 import { useLocation } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import { FaChevronRight, FaChevronLeft } from 'react-icons/fa';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Rating } from '@mui/material';
+import { RemoveHotel } from '../../redux/hotels/hotels';
 import './HotelDetails.css';
 
 const HotelDetails = () => {
   const location = useLocation();
   const hotel = location.state;
   console.log(location);
+  const dispatch = useDispatch();
+  const handleDelete = (e, id) => {
+    e.preventDefault();
+    dispatch(RemoveHotel(id));
+  };
   return (
     <div className="card_details">
       <div className="card_container_details">
@@ -38,16 +46,15 @@ const HotelDetails = () => {
           <FaChevronLeft className="left-arrow" />
           <FaChevronRight className="right-arrow" />
         </div>
-        <div class="product-details">
+        <div className="product-details">
           <h1>{hotel.name}</h1>
           <div className="star-rating">
-            {[...Array(5)].map((star) => {
-              return <span className="star">&#9733;</span>;
-            })}
+            <Rating name="read-only" value={hotel.rating} readOnly />
           </div>
-          <p class="information">{hotel.description}</p>
+          <p className="information">{hotel.description}</p>
         </div>
       </div>
+      <button type="button" onClick={(e) => handleDelete(e, hotel.id)}>Delete</button>
     </div>
   );
 };
