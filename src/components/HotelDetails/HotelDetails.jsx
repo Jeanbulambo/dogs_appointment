@@ -18,33 +18,51 @@ const HotelDetails = () => {
   };
   return (
     <div className="card_details">
-      <div className="card_container_details">
-        {/* <div className="card-img-details">
-        <img
-          className="img-details"
-          src={hotel.photo}
-          alt={hotel.name}
-        />
-      </div> */}
-        {/* <div className="inside_card_details">
-        <h3></h3>
-      </div> */}
-        {/* <Card style={{ width: '18rem' }}>
-        <Card.Header>{hotel.name}</Card.Header>
-        <ListGroup variant="flush">
-          <ListGroup.Item>{hotel.description}</ListGroup.Item>
-          <ListGroup.Item>{hotel.price}</ListGroup.Item>
-          <ListGroup.Item>{hotel.rating}</ListGroup.Item>
-          <ListGroup.Item>{hotel.location}</ListGroup.Item>
-        </ListGroup>
-      </Card> */}
-        <div className="card-img-details">
-          <img className="img-details" src={hotel.photo[0]} alt={hotel.name} />
+        <div className="marquee">
+          <div className="marquee-content">
+            <div className="marquee-item">
+              <img className="img-details" src={hotel.photo[0]} alt={hotel.name} />
+            </div>
+            <div className="marquee-item">
+              <img className="img-details" src={hotel.photo[1]} alt={hotel.name} />
+            </div>
+            <div className="marquee-item">
+              <img className="img-details" src={hotel.photo[2]} alt={hotel.name} />
+            </div>
+            <div className="marquee-item">
+              <img className="img-details" src={hotel.photo[3]} alt={hotel.name} />
+            </div>
+            <div className="marquee-item">
+              <img className="img-details" src={hotel.photo[0]} alt={hotel.name} />
+            </div>
+            <div className="marquee-item">
+              <img className="img-details" src={hotel.photo[1]} alt={hotel.name} />
+            </div>
+            <div className="marquee-item">
+              <img className="img-details" src={hotel.photo[2]} alt={hotel.name} />
+            </div>
+            <div className="marquee-item">
+              <img className="img-details" src={hotel.photo[3]} alt={hotel.name} />
+            </div>
+            <div className="marquee-item">
+              <img className="img-details" src={hotel.photo[0]} alt={hotel.name} />
+            </div>
+            <div className="marquee-item">
+              <img className="img-details" src={hotel.photo[1]} alt={hotel.name} />
+            </div>
+            <div className="marquee-item">
+              <img className="img-details" src={hotel.photo[2]} alt={hotel.name} />
+            </div>
+            <div className="marquee-item">
+              <img className="img-details" src={hotel.photo[3]} alt={hotel.name} />
+            </div>
+          </div>
+          {/* <img className="img-details" src={hotel.photo[0]} alt={hotel.name} />
           <img className="img-details" src={hotel.photo[1]} alt={hotel.name} />
           <img className="img-details" src={hotel.photo[2]} alt={hotel.name} />
           <img className="img-details" src={hotel.photo[3]} alt={hotel.name} />
           <FaChevronLeft className="left-arrow" />
-          <FaChevronRight className="right-arrow" />
+          <FaChevronRight className="right-arrow" /> */}
         </div>
         <div className="product-details">
           <h1>{hotel.name}</h1>
@@ -53,8 +71,11 @@ const HotelDetails = () => {
           </div>
           <p className="information">{hotel.description}</p>
         </div>
+<<<<<<< HEAD
       </div>
       <button type="button" onClick={(e) => handleDelete(e, hotel.id)}>Delete</button>
+=======
+>>>>>>> fd44c5a859da4b3bbaa2f364a10f50bbf5ed1728
     </div>
   );
 };
