@@ -2,16 +2,17 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { FetchedBookings } from '../../redux/bookings/bookings';
-import Booking from '../Booking/Booking';
+import CardBooking from '../CardBooking/CardBooking';
 
-const Bookings = () => {
+const ListBookings = () => {
   const dispatch = useDispatch;
   const bookings = useSelector((state) => state.bookings.data);
   // const status = useSelector((state) => state.bookings.status);
+  console.log(bookings);
   useEffect(() => {
     dispatch(FetchedBookings());
   }, [dispatch]);
-  if (bookings.lenght < 0) {
+  if (bookings.length < 0) {
     return (
       <div className="container-fluid">
         <h3>You do not have bookings now!</h3>
@@ -20,11 +21,11 @@ const Bookings = () => {
   }
   return (
     <div className="container-fluid">
-      {bookingsStatus.hotels.map((booking) => (
-        <Booking key={booking.id} />
+      {bookings.map((booking) => (
+        <CardBooking key={booking.id} />
       ))}
     </div>
   );
 };
 
-export default Bookings;
+export default ListBookings;

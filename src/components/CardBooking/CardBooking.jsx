@@ -1,10 +1,9 @@
 /* eslint linebreak-style: ["error", "windows"] */
 import React from 'react';
 import PropTypes from 'prop-types';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-import './Booking.css';
+import './CardBooking.css';
 
-const Booking = (props) => {
+const CardBooking = (props) => {
   const { booking } = props;
   return (
     <div>
@@ -16,7 +15,7 @@ const Booking = (props) => {
   );
 };
 
-Booking.propTypes = {
+CardBooking.propTypes = {
   booking: PropTypes.shape({
     id: PropTypes.number,
     checking_in: PropTypes.string,
@@ -26,4 +25,4 @@ Booking.propTypes = {
   }).isRequired,
 };
 
-export default Booking;
+export default CardBooking;

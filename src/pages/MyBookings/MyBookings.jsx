@@ -1,9 +1,11 @@
 /* eslint-disable linebreak-style */
 import React from 'react';
-import Bookings from '../components/bookings/bookings';
+import ListBookings from '../../components/ListBookings/ListBookings';
 
 const MyBookings = () => (
-  <Bookings />
+  <div>
+    <ListBookings />
+  </div>
 );
 
 export default MyBookings;
