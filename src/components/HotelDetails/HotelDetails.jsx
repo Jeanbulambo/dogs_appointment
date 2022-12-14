@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { Rating } from '@mui/material';
 
@@ -8,11 +8,13 @@ import { removeHotel } from '../../redux/hotels/hotels';
 const HotelDetails = () => {
   const location = useLocation();
   const hotel = location.state;
+  const navigate = useNavigate();
   console.log(location);
   const dispatch = useDispatch();
   const handleDelete = (e, id) => {
     e.preventDefault();
     dispatch(removeHotel(id));
+    navigate('/hotels');
   };
   return (
     <div className="card_details">

@@ -15,14 +15,12 @@ import './Booking.css';
 const AddBookingForm = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const hotels = useSelector((state) => state.hotels);
+  const hotels = useSelector((state) => state.hotels.data);
   useEffect(() => {
     dispatch(FetchedHotels());
   }, [dispatch]);
   const formRef = useRef();
   const handleSubmit = (e) => {
-    const test = localStorage.getItem('token');
-    console.log(test);
     e.preventDefault();
     const formData = new FormData(formRef.current);
     const data = Object.fromEntries(formData);
@@ -77,7 +75,7 @@ const AddBookingForm = () => {
 
         <Form.Select aria-label="Default select example" name="hotel_id">
           <option>Select the hotel</option>
-          {hotels.hotels.map((hotel) => (
+          {hotels.map((hotel) => (
             <option key={hotel.id} value={hotel.id}>
               {hotel.name}
             </option>

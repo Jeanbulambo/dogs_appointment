@@ -6,13 +6,13 @@ import { useNavigate } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { AddHotel } from '../../redux/hotels/hotels';
+// import { AddHotel } from '../../redux/hotels/hotels';
 
 const AddHotelForm = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const hotels = useSelector((state) => state.hotels);
+  const hotels = useSelector((state) => state.hotels.data);
   useEffect(() => {}, [hotels]);
-  console.log(hotels);
   const formRef = useRef();
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -30,7 +30,7 @@ const AddHotelForm = () => {
     navigate('/hotels');
   };
   return (
-    <Form ref={formRef} onSubmit={handleSubmit}>
+    <Form ref={formRef} onSubmit={handleSubmit()}>
       <Form.Group className="mb-3" controlId="name">
         <Form.Label>Name</Form.Label>
         <Form.Control type="text" placeholder="Name" name="name" />

@@ -16,6 +16,7 @@ const ListBookings = () => {
   }, [dispatch]);
   console.log(bookings);
   console.log(status);
+  // console.log(state);
   // useEffect(() => { dispatch(FetchedBookings()); }, [dispatch]);
   /* if (bookings.length = 0) {
     return (
