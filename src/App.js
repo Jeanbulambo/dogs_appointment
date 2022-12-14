@@ -7,6 +7,7 @@ import { ReactLocation } from 'react-location';
 import './components/app.css';
 import Navigation from './components/Navbar/Navbar';
 import Hotels from './components/Hotels/Hotels';
+import Bookings from './components/Bookings/Bookings';
 import AddHotelForm from './pages/AddHotel/AddHotelForm';
 import HotelDetails from './components/HotelDetails/HotelDetails';
 import SignInPage from './pages/Signin/SignInPage';
@@ -22,6 +23,7 @@ function App() {
         <main className="main">
           <Navigation />
           <Routes>
+            <Route path="/bookings" element={<Bookings />} />
             <Route path="/hotels" element={<Hotels />} />
             <Route path="/about" element={<About />} />
             <Route path="/add-hotel" element={<AddHotelForm />} />

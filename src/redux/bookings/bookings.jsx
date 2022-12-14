@@ -14,8 +14,14 @@ const REMOVED_BOOKING = 'bookings/DELETE';
 export const FetchedBookings = createAsyncThunk(FETCHED_BOOKINGS, async () => {
   try {
     const endpoint = `${url}/bookings`;
-    const response = await axios.get(endpoint);
-    const payload = response.data.map((booking) => ({
+    const token = localStorage.getItem('token');
+    const response = await axios.get(endpoint, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    console.log(response);
+    const payload = response.map((booking) => ({
       id: booking.id,
       checking_in: booking.checking_in,
       checking_out: booking.checking_out,
