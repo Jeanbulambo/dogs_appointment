@@ -84,14 +84,13 @@ const Login = ({ setCurrUser, setShow }) => {
                         </label>
                       </div>
                       <input
-
                         type="submit"
                         value="Login"
                         className="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
                       />
                       <div className="d-flex align-items-center justify-content-center pb-4">
                         <p className="mb-0 me-2"> Dont have an account?</p>
-                        <a href="#signup" onClick={handleClick}>
+                        <a href="#Signup" onClick={handleClick}>
                           Signup
                         </a>
                       </div>

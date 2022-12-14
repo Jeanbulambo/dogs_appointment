@@ -40,26 +40,68 @@ const Signup = ({ setCurrUser, setShow }) => {
     setShow(true);
   };
   return (
-    <div>
-      <form ref={formRef} onSubmit={handleSubmit}>
-        Email:
-        {' '}
-        <input type="email" name="email" placeholder="email" />
-        <br />
-        Password:
-        {' '}
-        <input type="password" name="password" placeholder="password" />
-        <br />
-        <input type="submit" value="Submit" />
-      </form>
-      <br />
-      <div>
-        Already registered,
-        <a href="#login" onClick={handleClick}>Login</a>
-        {' '}
-        here.
+    <section className="">
+      <div className="px-4 py-5 px-md-5 text-center text-lg-start">
+        <div className="container">
+          <div className="row gx-lg-5 align-items-center">
+            <div className="col-lg-6 mb-5 mb-lg-0">
+              <h1 className="my-5 display-3 fw-bold ls-tight">
+                YOUR BEST HOTELS
+                {' '}
+                <br />
+                <span className="text-primary">JUST SIGN UP</span>
+              </h1>
+              <p style={{ color: 'hsl(217, 10%, 50.8%)' }}>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Eveniet, itaque accusantium odio, soluta, corrupti aliquam
+                quibusdam tempora at cupiditate quis eum maiores libero
+                veritatis? Dicta facilis sint aliquid ipsum atque?
+              </p>
+            </div>
+            <div className="col-lg-6 mb-5 mb-lg-0">
+              <div className="card">
+                <div className="card-body py-5 px-md-5">
+                  <form ref={formRef} onSubmit={handleSubmit}>
+                    <div className="form-outline mb-4">
+                      {' '}
+                      <input type="email" id="email" className="form-control" />
+                      <label className="form-label" htmlFor="email">
+                        Email address
+                      </label>
+                    </div>
+                    <div className="form-outline mb-4">
+                      {' '}
+                      <input
+                        type="password"
+                        id="pass"
+                        className="form-control"
+                      />
+                      <label className="form-label" htmlFor="pass">
+                        Password
+                      </label>
+                    </div>
+                    <button
+                      type="submit"
+                      className="btn btn-primary btn-block mb-4"
+                    >
+                      SIGN UP
+                    </button>
+                    <div>
+                      Already registered,
+                      <a href="#login" onClick={handleClick}>
+                        Login
+                      </a>
+                      {' '}
+                      here.
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
