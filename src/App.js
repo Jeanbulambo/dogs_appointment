@@ -19,8 +19,8 @@ function App() {
   return (
     <div className="App">
       <Router location={location}>
+        <Navigation />
         <main className="main">
-          <Navigation />
           <Routes>
             <Route path="/hotels" element={<Hotels />} />
             <Route path="/about" element={<About />} />

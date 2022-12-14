@@ -38,8 +38,7 @@ const Navigation = () => {
       <ul className="nav-ul">
         <li>
           <NavLink
-            // className={({ isActive }) => (isActive ? 'active-link' : 'non-active')}
-            className="active-link"
+            className={({ isActive }) => (isActive ? 'active-link' : 'non-active')}
             to="/"
             onClick={toggleMenu}
           >
@@ -48,8 +47,7 @@ const Navigation = () => {
         </li>
         <li>
           <NavLink
-            // className={({ isActive }) => (isActive ? 'active-link' : 'non-active')}
-            className="active-link"
+            className={({ isActive }) => (isActive ? 'active-link' : 'non-active')}
             to="/about"
             onClick={toggleMenu}
           >
@@ -58,8 +56,7 @@ const Navigation = () => {
         </li>
         <li>
           <NavLink
-            // className={({ isActive }) => (isActive ? 'active-link' : 'non-active')}
-            className="active-link"
+            className={({ isActive }) => (isActive ? 'active-link' : 'non-active')}
             to="/add-booking"
             onClick={toggleMenu}
           >
@@ -70,8 +67,7 @@ const Navigation = () => {
           <>
             <li>
               <NavLink
-                // className={({ isActive }) => (isActive ? 'active-link' : 'non-active')}
-                className="active-link"
+                className={({ isActive }) => (isActive ? 'active-link' : 'non-active')}
                 to="/add-booking"
                 onClick={toggleMenu}
               >
@@ -80,8 +76,7 @@ const Navigation = () => {
             </li>
             <li>
               <NavLink
-                // className={({ isActive }) => (isActive ? 'active-link' : 'non-active')}
-                className="active-link"
+                className={({ isActive }) => (isActive ? 'active-link' : 'non-active')}
                 to="/add-hotel"
                 onClick={toggleMenu}
               >
@@ -100,8 +95,7 @@ const Navigation = () => {
         ) : (
           <li>
             <NavLink 
-              // className={({ isActive }) => (isActive ? 'active' : 'non-active')}
-              className="active-link"
+              className={({ isActive }) => (isActive ? 'active' : 'non-active')}
               to="/" 
               onClick={toggleMenu}
             >

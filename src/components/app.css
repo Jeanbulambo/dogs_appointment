@@ -14,7 +14,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .main {
+  .App {
     display: flex;
     flex-direction: row;
     width: 100%;
