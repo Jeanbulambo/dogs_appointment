@@ -69,7 +69,7 @@
 
 @media screen and (min-width: 768px) {
   .navbar {
-    width: 25%;
+    width: 35%;
     height: 100vh;
     flex-direction: column;
     justify-content: center;

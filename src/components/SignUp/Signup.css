@@ -1,0 +1,59 @@
+.signup-container {
+    width: 100%;
+    height: 100vh;
+}
+
+.signup-content {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-signup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 90%;
+    gap: 20px;
+}
+
+.h1 {
+    text-align: center;
+    padding: 10px;
+}
+
+.input-signup {
+    border-radius: 125rem;
+    padding: 10px;
+    width: 90%;
+    gap: 10px;
+}
+
+.button {
+    width: 35%;
+    border-radius: 999em ;
+    margin: auto;
+}
+
+.sigin-btn {
+    text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+    .form-signup {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        width: 60%;
+        gap: 20px;
+    }
+
+    .input-signup {
+        width: 70%;
+        gap: 10px;
+        text-align: center;
+    }
+}
