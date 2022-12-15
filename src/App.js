@@ -15,11 +15,6 @@ import Booking from './pages/Booking/Booking';
 import MyBookings from './pages/MyBookings/MyBookings';
 
 function App() {
-  const [id, setID] = useState(null);
-  const getID = (id) => {
-    setID(id);
-  };
-
   return (
     <div className="App">
       <Router>
