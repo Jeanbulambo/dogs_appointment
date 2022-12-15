@@ -1,9 +1,9 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { Rating } from '@mui/material';
-
-import './HotelDetails.css';
 import { removeHotel } from '../../redux/hotels/hotels';
+import './HotelDetails.css';
+
 /* eslint linebreak-style: ["error", "windows"] */
 const HotelDetails = () => {
   const location = useLocation();

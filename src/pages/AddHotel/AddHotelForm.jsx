@@ -7,6 +7,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { AddHotel } from '../../redux/hotels/hotels';
 // import { AddHotel } from '../../redux/hotels/hotels';
+// import { AddHotel } from '../../redux/hotels/hotels';
 
 const AddHotelForm = () => {
   const dispatch = useDispatch();
