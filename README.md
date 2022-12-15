@@ -1,11 +1,9 @@
-<a name="readme-top"></a>
-
 <div align="center">
 
   <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
-  <h3><b>hotel-fur-pets</b></h3>
+  <h3><b>HOTEL FUR PETS FRONTEND</b></h3>
 
 </div>
 
@@ -22,118 +20,127 @@
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ](#faq)
 - [📝 License](#license)
 
+# 📖 Hotel Fur Pets FRONTEND <a name="about-project"></a>
 
-# 📖 [Hello rails react] <a name="about-project"></a>
-
-> hotel-fur-pets-backend.
-
-**[your_project__name]** is a...
+This application allows you to see the hotels for pets saved in the Hotel Fur Pets API. In addition to seeing the hotels, the user can also see the details of each hotel, and make reservations.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> This is a web App that allows users to reserve, cancel, and delete a booking hotel for pets. By bboking a user can get all the information related to a specific hotel.
-
 <details>
-  <summary>Client</summary>
+  <summary>Styles</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React/ redux</a></li>
+    <li><a href="https://www.w3schools.com/css/">CSS</a></li>
   </ul>
 </details>
 
 <details>
-  <summary>Client</summary>
+  <summary>Framework</summary>
   <ul>
-    <li><a href="https://expressjs.com/">Roby on Rails</a></li>
+    <li><a href="https://reactjs.org/">React</a></li>
   </ul>
 </details>
 
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-  </ul>
-</details>
+### Key Features <a name="key-features"></a>
+
+- Authentication.
+- Create a booking.
+- Get the bookings of the current user.
+- Get the data of the hotels.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+> Comming soon.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> To get a local copy up and running, follow these steps.
+To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
 In order to run this project you need:
 
-- A code editor like Visual Studio Code
+
+```sh
+ npm i react
+```
 
 ### Setup
 
-Clone these repositories to your desired folder:
+Clone this repository to your desired folder:
 
-- for backend https://github.com/VaneCode/hotel-fur-pets-backend.git
-- for frontend https://github.com/Jeanbulambo/dogs_appointment.git
+```sh
+  cd my-folder
+  https://github.com/Jeanbulambo/dogs_appointment.git
+```
 
 ### Install
 
-Go to your terminal and run the app with the following command:
+Install this project with:
+
+```sh
+  cd dogs_appointment
+  npm instal
 ```
-$ for the backend :
-- bundle install
-- make sure you install your database by running rails db:create then rails db:migrate
 
-$ for the frontend :
-- npm install
+### Usage
+
+To execute the following command:
+
+
+```sh
+  npm start
 ```
-- **Backend navigate to:** http://localhost:5000/ 
-
-- **Frontend navigate to:** http://localhost:5000/ 
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## 👥 Author <a name="authors"></a>
 
-## 👥 Authors <a name="authors"></a>
+👤 **Vanessa Bonito**
 
+- GitHub: [@VaneCode](https://github.com/VaneCode)
+- Twitter: [@BonitoNarvaez](https://twitter.com/BonitoNarvaez)
+- LinkedIn: [Vanessa Bonito Narváez](https://www.linkedin.com/in/vanessa-bonito-narvaez/)
 
-👤 **Author**
-
-- GitHub: [@VaneCode](https://github.com/Jeanbulambo)
-- LinkedIn: [@Vanessa Bonito Narváez](https://www.linkedin.com/in/vanessa-bonito-narvaez/)
-
-👤 **Author**
+👤 **Aron Abraham**
 
 - GitHub: [@Aaron](https://github.com/aron-helu)
-- LinkedIn: [@Aaron](https://www.linkedin.com/in/aron-abraham-90a4321b0/)
+- LinkedIn: [@Aaron](https://www.linkedin.com/in/aron-abraham-90a4321b0/) 
 
-👤 **Author**
+👤 **Jean Bulambo**
 
 - GitHub: [@Jeanbulambo](https://github.com/Jeanbulambo)
 - LinkedIn: [@Jeanbulambo](https://www.linkedin.com/in/jean-bulambo-20662a14a/)
 
-👤 **Author**
+👤 **Achike Chuma Edward**
 
 - GitHub: [@chumaachike](https://github.com/chumaachike)
 - Twitter: [@AchikeChuma](https://twitter.com/AchikeChuma)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/edward-achike-903432111/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **This Web App deployment**
+- [Calculate the total price of the bookings.]
+- [Allow the user to search bookings by date.] 
+- [Add roles for users.] 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 🤝 Contributing <a name="contributing"></a>
 
@@ -143,25 +150,21 @@ Feel free to check the [issues page](../../issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
-If you like this project...
+Give a star if you like this project!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
-
-I would like to thank...
+- Microverse.
+- The credit of the original design is to Murat Korkmaz on Behance.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
