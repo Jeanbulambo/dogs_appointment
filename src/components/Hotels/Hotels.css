@@ -1,14 +1,14 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 @media screen and (min-width: 768px) {
-    .container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin: auto;
-    }
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+  }
 }

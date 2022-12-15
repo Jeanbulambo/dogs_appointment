@@ -21,6 +21,7 @@ const SignUp = () => {
       password: data.password,
       password_confirmation: data.password_confirmation,
     };
+    /* eslint-disable no-console */
     console.log(user);
     dispatch(postSignUp(user));
     navigate('/');

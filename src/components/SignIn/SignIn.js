@@ -19,6 +19,7 @@ const SignIn = () => {
       email: data.email,
       password: data.password,
     };
+    /* eslint-disable no-console */
     console.log(user);
     if (loading) {
       return;
