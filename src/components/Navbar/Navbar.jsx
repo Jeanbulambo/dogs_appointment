@@ -34,11 +34,10 @@ const Navigation = () => {
       >
         <i className="fa-solid fa-bars" />
       </div>
-
+      <ul className="nav-ul">
       <div className="logo-div">
         <img src={logo} alt="logo" className="logo-img" />
       </div>
-      <ul className="nav-ul">
         <li>
           <NavLink className={({ isActive }) => isActive ? "active-link" : "non-active"}
             to="/hotels"

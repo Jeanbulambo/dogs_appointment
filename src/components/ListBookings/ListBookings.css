@@ -1,0 +1,12 @@
+.booking-header {
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+    padding: 10px;
+}
+
+.th {
+    background: lightblue;
+    padding: 0.5rem;
+    width: 100%;
+}

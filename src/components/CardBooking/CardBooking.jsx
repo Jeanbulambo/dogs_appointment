@@ -6,11 +6,13 @@ import './CardBooking.css';
 const CardBooking = (props) => {
   const { booking } = props;
   return (
-    <div>
-      <p>{booking.animal_name}</p>
-      <p>{booking.animal_type}</p>
-      <p>{booking.checking_in}</p>
-      <p>{booking.checking_out}</p>
+    <div className="card-booking">
+      <div className="card-one">
+        <p className="td">{booking.animal_name}</p>
+        <p className="td">{booking.animal_type}</p>
+        <p className="td">{booking.checking_in}</p>
+        <p className="td">{booking.checking_out}</p>
+      </div>
     </div>
   );
 };

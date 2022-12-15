@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { FetchedBookings } from '../../redux/bookings/bookings';
 import CardBooking from '../CardBooking/CardBooking';
-
+import './ListBookings.css'
 const ListBookings = () => {
   const dispatch = useDispatch();
   const bookings = useSelector((state) => state.bookings.data);
@@ -15,6 +15,12 @@ const ListBookings = () => {
   console.log(status);
   return (
     <div className="container-fluid">
+      <div className="booking-header">
+        <p className="th">Animal Name</p>
+        <p className="th">Animal Type</p>
+        <p className="th">Booking Checking In Date</p>
+        <p className="th">Booking Checking Out Date</p>
+      </div>
       {bookings.map((booking) => (
         <CardBooking key={booking.id} booking={booking} />
       ))}
