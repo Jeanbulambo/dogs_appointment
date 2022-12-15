@@ -26,7 +26,8 @@
   margin: auto;
 }
 
-.active-link, .non-active {
+.active-link,
+.non-active {
   text-align: center;
   text-decoration: none;
   color: rgb(100, 111, 111);
@@ -38,10 +39,10 @@
   align-items: center;
   padding: 10px;
   gap: 5px;
-  font-weight: 700;  
+  font-weight: 700;
 }
 
-.navbar.toggle .nav-ul{
+.navbar.toggle .nav-ul {
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -100,12 +101,12 @@
     font-size: 12px;
     width: 100%;
   }
- 
+
   .navbar.toggle {
     position: relative;
   }
 
-  .navbar.toggle .nav-ul{
+  .navbar.toggle .nav-ul {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -119,9 +120,8 @@
     height: 100vh;
   }
 
-
   .active-link {
-    background-color: #9FC328;
+    background-color: #9fc328;
   }
 
   .logo-img {
