@@ -14,7 +14,7 @@ const ListBookings = () => {
   console.log(bookings);
   console.log(status);
   return (
-    <div className="container-fluid">
+    <div className="container">
       <div className="booking-header">
         <p className="th">Animal Name</p>
         <p className="th">Animal Type</p>
