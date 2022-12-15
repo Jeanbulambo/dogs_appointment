@@ -1,30 +1,38 @@
+/* eslint-disable linebreak-style */
+// last one
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import React, { useState } from 'react';
-import Header from './components/Header';
-import Myprofile from './components/Myprofile';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './components/app.css';
-import Home from './components/Home';
-import Hotel from './components/Hotel';
+import Navigation from './components/Navbar/Navbar';
+import Hotels from './components/Hotels/Hotels';
+import AddHotelForm from './pages/AddHotel/AddHotelForm';
+import HotelDetails from './components/HotelDetails/HotelDetails';
+import SignInPage from './pages/Signin/SignInPage';
+import SignUpPage from './pages/SignUp/SignUpPage';
+import About from './pages/About/About';
+import Booking from './pages/Booking/Booking';
+import MyBookings from './pages/MyBookings/MyBookings';
 
 function App() {
-  const [id, setID] = useState(null);
-  const getID = (id) => {
-    setID(id);
-  };
-
   return (
-    <Router>
-      <Header />
-      <div className="container">
-        <Routes>
-          <Route path="/my-profile" element={<Myprofile />} />
-          <Route path="/" element={<Home getID={getID} />} />
-          <Route path="/hotel" element={<Hotel id={id} />} />
-        </Routes>
-      </div>
-    </Router>
+    <div className="App">
+      <Router>
+        <Navigation />
+        <main className="main">
+          <Routes>
+            <Route path="/hotels" element={<Hotels />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/add-hotel" element={<AddHotelForm />} />
+            <Route path="/add-booking" element={<Booking />} />
+            <Route path="/details" element={<HotelDetails />} />
+            <Route path="/" element={<SignInPage />} />
+            <Route path="/sign-up" element={<SignUpPage />} />
+            <Route path="/my-bookings" element={<MyBookings />} />
+          </Routes>
+        </main>
+      </Router>
+    </div>
   );
 }
 

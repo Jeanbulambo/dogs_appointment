@@ -1,0 +1,46 @@
+.form {
+  width: 100%;
+  margin: auto;
+  left: 30%;
+}
+
+.mb-3 {
+  gap: 10px !important;
+  display: flex;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+
+.rmdp-input {
+  width: 80% !important;
+  padding: 15px !important;
+}
+
+.form-label {
+  width: 60%;
+}
+
+#animal_type {
+  padding: 2px !important;
+  width: 50%;
+}
+
+#animal_name {
+  padding: 2px !important;
+  width: 50%;
+}
+
+.form-select {
+  padding: 12px;
+  margin-left: 12px;
+  width: 89%;
+}
+
+.btn {
+  margin-left: 20%;
+  margin-top: 30px;
+  width: 35%;
+  border-radius: 999em;
+  background-color: rgb(72, 106, 106);
+}

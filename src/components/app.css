@@ -1,3 +1,24 @@
-body {
-  background-color: #eee;
+.App {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .App {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .main {
+    width: 85%;
+    margin: auto;
+  }
 }
