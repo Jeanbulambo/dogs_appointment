@@ -18,8 +18,8 @@ const ListBookings = () => {
       <div className="booking-header">
         <p className="th">Animal Name</p>
         <p className="th">Animal Type</p>
-        <p className="th">Booking Checking In Date</p>
-        <p className="th">Booking Checking Out Date</p>
+        <p className="th">Checking In</p>
+        <p className="th">Checking Out</p>
       </div>
       {bookings.map((booking) => (
         <CardBooking key={booking.id} booking={booking} />
