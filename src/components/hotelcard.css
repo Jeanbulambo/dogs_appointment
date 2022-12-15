@@ -1,0 +1,5 @@
+.hotel-socials {
+  display: flex;
+  list-style-type: none;
+  gap: 2px;
+}
