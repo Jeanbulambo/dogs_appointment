@@ -11,8 +11,6 @@ const ListBookings = () => {
   useEffect(() => {
     dispatch(FetchedBookings());
   }, [dispatch]);
-  console.log(bookings);
-  console.log(status);
   return (
     <div className="container-booking">
       <div className="booking-header">

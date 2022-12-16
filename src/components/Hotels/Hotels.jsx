@@ -10,7 +10,6 @@ import './Hotels.css';
 const Hotels = () => {
   const dispatch = useDispatch();
   const hotels = useSelector((state) => state.hotels.data);
-  console.log(hotels);
   useEffect(() => {
     dispatch(FetchedHotels());
   }, [dispatch]);

@@ -6,8 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { AddHotel } from '../../redux/hotels/hotels';
-// import { AddHotel } from '../../redux/hotels/hotels';
-// import { AddHotel } from '../../redux/hotels/hotels';
+import './AddHotel.css';
 
 const AddHotelForm = () => {
   const dispatch = useDispatch();
@@ -31,44 +30,44 @@ const AddHotelForm = () => {
     navigate('/hotels');
   };
   return (
-    <Form ref={formRef} onSubmit={ (e) => {handleSubmit(e)}}>
-      <Form.Group className="mb-3" controlId="name">
-        <Form.Label>Name</Form.Label>
-        <Form.Control type="text" placeholder="Name" name="name" />
-      </Form.Group>
+    <div className="hotel-form">
+      <h4>Add Hotel</h4>
+      <Form ref={formRef} onSubmit={ (e) => {handleSubmit(e)}}>
+        <Form.Group className="mb-3" controlId="name">
+          <Form.Label>Name</Form.Label>
+          <Form.Control type="text" placeholder="Name" name="name" />
+        </Form.Group>
 
-      <Form.Group className="mb-3" controlId="location">
-        <Form.Label>Location</Form.Label>
-        <Form.Control type="text" placeholder="Location" name="location" />
-      </Form.Group>
+        <Form.Group className="mb-3" controlId="location">
+          <Form.Label>Location</Form.Label>
+          <Form.Control type="text" placeholder="Location" name="location" />
+        </Form.Group>
 
-      <Form.Group className="mb-3" controlId="rating">
-        <Form.Label>Rating</Form.Label>
-        <Form.Control type="text" placeholder="0" name="rating" />
-      </Form.Group>
+        <Form.Group className="mb-3" controlId="rating">
+          <Form.Label>Rating</Form.Label>
+          <Form.Control type="text" placeholder="0" name="rating" />
+        </Form.Group>
 
-      <Form.Group className="mb-3" controlId="price">
-        <Form.Label>Price per day</Form.Label>
-        <Form.Control type="text" placeholder="0.0" name="price" />
-      </Form.Group>
+        <Form.Group className="mb-3" controlId="price">
+          <Form.Label>Price per day</Form.Label>
+          <Form.Control type="text" placeholder="0.0" name="price" />
+        </Form.Group>
 
-      <Form.Group className="mb-3" controlId="description">
-        <Form.Label>Description</Form.Label>
-        <Form.Control as="textarea" rows={3} name="description" />
-      </Form.Group>
+        <Form.Group className="mb-3" controlId="description">
+          <Form.Label>Description</Form.Label>
+          <Form.Control as="textarea" rows={3} name="description" />
+        </Form.Group>
 
-      <Form.Group className="mb-3" controlId="photo">
-        <Form.Label>Image</Form.Label>
-        <Form.Control type="text" placeholder=" " name="photo" />
-        <Form.Text className="text-muted">
-          Add your image or an url.
-        </Form.Text>
-      </Form.Group>
+        <Form.Group className="mb-3" controlId="photo">
+          <Form.Label>Add your image or an url.</Form.Label>
+          <Form.Control type="file" placeholder=" " name="photo" />
+        </Form.Group>
 
-      <Button variant="primary" type="submit">
-        Submit
-      </Button>
-    </Form>
+        <Button variant="primary" type="submit">
+          Submit
+        </Button>
+      </Form>
+    </div>
   );
 };
 

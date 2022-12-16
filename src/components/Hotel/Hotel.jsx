@@ -46,7 +46,7 @@ Hotel.propTypes = {
     id: PropTypes.number,
     name: PropTypes.string,
     description: PropTypes.string,
-    photo: PropTypes.string,
+    photo: PropTypes.array,
     rating: PropTypes.number,
     location: PropTypes.string,
     price: PropTypes.number,
