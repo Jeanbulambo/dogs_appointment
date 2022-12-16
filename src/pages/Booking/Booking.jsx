@@ -36,6 +36,7 @@ const AddBookingForm = () => {
   };
   return (
     <div className="form">
+      <h4>Add Booking </h4>
       <Form ref={formRef} onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="checking_in">
           <Form.Label>Checking in date</Form.Label>
