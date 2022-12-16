@@ -31,7 +31,7 @@ const AddHotelForm = () => {
     navigate('/hotels');
   };
   return (
-    <Form ref={formRef} onSubmit={handleSubmit()}>
+    <Form ref={formRef} onSubmit={ (e) => {handleSubmit(e)}}>
       <Form.Group className="mb-3" controlId="name">
         <Form.Label>Name</Form.Label>
         <Form.Control type="text" placeholder="Name" name="name" />

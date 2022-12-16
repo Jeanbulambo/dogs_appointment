@@ -6,6 +6,10 @@
   overflow-y: auto;
 }
 
+.marquee {
+  height: 20vh;
+}
+
 .marquee-content {
   display: flex;
   height: 30vh;
@@ -38,6 +42,13 @@
   font-size: 15px;
 }
 
+.star-rating {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin: auto;
+}
+
 @keyframes scrolling {
   0% { transform: translateX(0); }
   100% { transform: translateX(-144vw); }
@@ -63,10 +74,21 @@
     width: 70%;
   }
 
+.marquee {
+  height: 35vh;
+}
+
+.product-details {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: darkslategray;
+}
+
   .button {
-    width: 15%;
+    width: 15% !important;
     border-radius: 999em;
-    margin: auto;
   }
 
   .img-details {
