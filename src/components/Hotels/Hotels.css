@@ -1,11 +1,11 @@
-.container {
+.container-hotel {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
 @media screen and (min-width: 768px) {
-  .container {
+  .container-hotel {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
