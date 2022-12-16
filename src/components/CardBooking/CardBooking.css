@@ -1,4 +1,14 @@
+.card-one {
+  display: flex;
+  flex-direction: row;
+  border-collapse: collapse;
+  gap: 5px;
+}
 
+.td {
+  width: 30%;
+  text-align: center;
+}
 @media screen and (min-width: 768px) {
   .card-booking {
     display: flex;
@@ -20,7 +30,7 @@
 
   .td {
     padding: 15px;
-    text-align: justify;
+    text-align: center;
     width: 22.3%;
     margin-left: 5px;
   }
