@@ -11,6 +11,7 @@
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
+  - [Kanban board](#kanban-board)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
@@ -30,6 +31,19 @@
 # 📖 Hotel Fur Pets FRONTEND <a name="about-project"></a>
 
 This application allows you to see the hotels for pets saved in the Hotel Fur Pets API. In addition to seeing the hotels, the user can also see the details of each hotel, and make reservations.
+
+# Kanban board <a name="kanban-board"></a>
+
+You can see our [kanban board](https://github.com/users/Jeanbulambo/projects/2)
+
+![image](https://user-images.githubusercontent.com/53547956/205092158-5cd9f64c-8fa1-43d7-841c-fdd81dbafa3b.png)
+
+In our group we are 4 people:
+
+- [@VaneCode](https://github.com/VaneCode)
+- [@Aaron](https://github.com/aron-helu) 
+- [@chumaachike](https://github.com/chumaachike)
+- [@Jeanbulambo](https://github.com/Jeanbulambo)
 
 ## 🛠 Built With <a name="built-with"></a>
 
